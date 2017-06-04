@@ -4,7 +4,13 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const ID3 = require("id3-parser");
+const mm = require("musicmetadata");
 const fs = require("fs");
-ID3.parse(fs.readFileSync('f:/a.mp3')).then((tag) => {
-    console.log(tag);
+// create a new parser from a node ReadStream
+var parser = mm(fs.createReadStream('f:/b.mp3'), {
+    duration: true
+}, function (err, metadata) {
+    if (err)
+        throw err;
+    console.log(metadata);
 });

@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const KoaRouter = require("koa-router");
+const mongodb = require("mongodb");
 class StoryService {
     constructor(mongodb) {
         this.mongodb = mongodb;
@@ -17,11 +18,31 @@ class StoryService {
     }
     initRouting() {
         this.router.post('/create', this.addStory.bind(this));
+        this.router.post('/upload', this.uploadMp3.bind(this));
+        this.router.get('/list', this.list.bind(this));
+    }
+    uploadMp3(ctx, next) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let gridfs = new mongodb.GridFSBucket(this.mongodb.db);
+            let bb = gridfs.openUploadStream("test");
+            ctx.req.pipe(bb);
+            ctx.body = {
+                'piped': 'ok'
+            };
+        });
     }
     addStory(ctx, next) {
         return __awaiter(this, void 0, void 0, function* () {
             let result = yield this.mongodb.db.collection("stories").insertOne(ctx.request.body);
-            console.log(result);
+            ctx.body = {
+                "insertedId": result.insertedId
+            };
+        });
+    }
+    list(ctx, next) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let cursor = yield this.mongodb.db.collection('stories').find({});
+            ctx.body = yield cursor.toArray();
         });
     }
 }
