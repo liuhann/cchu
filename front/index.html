@@ -7,24 +7,32 @@
 
     <link href="css/style.css" type="text/css" rel="stylesheet"/>
     <link href="fontello-3298a2ca/css/fontello.css" type="text/css" rel="stylesheet"/>
+    <!--<script src="js/vue.js" language="javascript"></script>-->
+
     <title>Title</title>
 </head>
 <body>
 
-<div class="player fs">
+<div class="player fs" id="player">
     <div class="nav"></div>
     <div class="scene">
         <div class="background"></div>
         <div class="cover"></div>
     </div>
     <div class="bar">
+        <div class="progressBar">
+            <div class="percent"></div>
+        </div>
+
         <div id='media-player'>
             <video id='media-video' controls="false">
-                <source src='sample/儿童故事-贝贝熊绘本故事之爱上足球.mp3' type="audio/mp3">
+                <source src='sample/神奇的树桩.mp3' type="audio/mp3">
             </video>
             <div id='media-controls'></div>
         </div>
-        <div class="start icon-play-1"></div>
+        <div class="btn start icon-play-1"></div>
+        <div class="btn next icon-fast-fw"></div>
+        <div class="btn prev icon-fast-bw"></div>
     </div>
 </div>
 
@@ -38,11 +46,13 @@
 
 </div>
 
+<div id="app">
 
+</div>
 <div class="collections">
 
 </div>
 
-
+<script src="dist/build.js"></script>
 </body>
 </html>

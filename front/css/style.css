@@ -46,18 +46,53 @@ body {
   bottom: 0;
   width: 100vw;
 }
+.player .bar .progressBar {
+  width: 100vw;
+  top: -1vh;
+  position: absolute;
+  height: 1vh;
+  background-color: #F2A783;
+}
+.player .bar .progressBar .percent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1vh;
+  background-color: #E66426;
+  border-right: 1vw solid #F28C5A;
+  width: 20vw;
+}
+.player .bar .btn {
+  background: #6ccc0c;
+  border: 1vw solid #e4f2f5;
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+}
 .player .bar .start {
   width: 10vw;
   height: 10vw;
-  border-radius: 50%;
   font-size: 8vw;
-  background: #6ccc0c;
-  color: #fff;
-  text-align: center;
-  padding: 4vw;
-  position: absolute;
-  left: 41vw;
+  padding: 3vw 4vw 5vw 4vw;
+  left: 40vw;
   top: 2vh;
+}
+.player .bar .next {
+  width: 7vw;
+  height: 7vw;
+  font-size: 5vw;
+  padding: 1.5vw 1vw 1.5vw 2vw;
+  left: 70vw;
+  top: 4vh;
+}
+.player .bar .prev {
+  width: 7vw;
+  height: 7vw;
+  font-size: 5vw;
+  padding: 1.5vw 2vw 1.5vw 1vw;
+  left: 20vw;
+  top: 4vh;
 }
 #media-video {
   display: none;

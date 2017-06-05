@@ -16,7 +16,13 @@
     "@types/mongodb": "^2.2.2",
     "@types/musicmetadata": "^2.0.3",
     "@types/node": "^7.0.22",
-    "@types/node-fetch": "^1.6.7"
+    "@types/node-fetch": "^1.6.7",
+    "css-loader": "^0.28.4",
+    "ts-loader": "^2.1.0",
+    "typescript": "^2.3.4",
+    "vue-loader": "^12.2.1",
+    "vue-template-compiler": "^2.3.3",
+    "webpack": "^2.6.1"
   },
   "dependencies": {
     "@types/koa-bodyparser": "^3.0.23",
@@ -27,6 +33,7 @@
     "koa-router": "^7.2.0",
     "mongodb": "^2.2.27",
     "musicmetadata": "^2.0.5",
-    "node-fetch": "^1.7.0"
+    "node-fetch": "^1.7.0",
+    "vue": "^2.3.3"
   }
 }
