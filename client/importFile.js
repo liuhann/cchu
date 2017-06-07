@@ -12,7 +12,7 @@ const fs = require("fs");
 const fetch = require("node-fetch");
 const formData = require("form-data");
 const MusicMeta = require("musicmetadata");
-const ROOT = "F:/KwDownload/song";
+const ROOT = "E:/KwDownload/song/";
 const HOST = "http://jinjing.duapp.com";
 function go(dir) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -27,6 +27,7 @@ function go(dir) {
                         let musicMeta = yield readFileMeta(fileFullPath);
                         let form = new formData();
                         form.append('file', fs.createReadStream(fileFullPath));
+                        form.append('path', fileFullPath.substr(ROOT.length));
                         let uploadResult = yield fetch(HOST + "/story/upload", {
                             method: "POST",
                             body: form
@@ -79,4 +80,5 @@ function readFileMeta(filePath) {
         });
     });
 }
-go(ROOT + "/微小宝睡前童话故事");
+// go(ROOT + "/微小宝睡前童话故事") ;
+go(ROOT);

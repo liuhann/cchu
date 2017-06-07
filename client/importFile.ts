@@ -5,7 +5,7 @@ import formData = require("form-data");
 const MusicMeta = require("musicmetadata");
 
 
-const ROOT = "F:/KwDownload/song";
+const ROOT = "E:/KwDownload/song/";
 const HOST = "http://jinjing.duapp.com";
 
 async function go(dir:string) {
@@ -22,6 +22,7 @@ async function go(dir:string) {
                     let musicMeta = await readFileMeta(fileFullPath);
                     let form = new formData();
                     form.append('file', fs.createReadStream(fileFullPath));
+                    form.append('path', fileFullPath.substr(ROOT.length));
 
                     let uploadResult = await fetch(HOST + "/story/upload", {
                         method: "POST",
@@ -75,4 +76,5 @@ async function readFileMeta(filePath:string):Promise<MM.Metadata> {
 
 
 
-go(ROOT + "/微小宝睡前童话故事") ;
+// go(ROOT + "/微小宝睡前童话故事") ;
+go(ROOT);

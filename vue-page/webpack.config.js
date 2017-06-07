@@ -1,11 +1,15 @@
 const path = require('path');
+const nodePageRoot = path.resolve(__dirname, '../egg-demo/page/js/');
+const vuxLoader = require('vux-loader')
+
+const ConsoleLogOnBuildWebpackPlugin = require('./plugins/ConsoleLogOnBuildWebpackPlugin');
 
 const webpackConfig  = {
     entry: {
-        main: './front/js/index.js',
+        man: './src/entry.js',
     },
     output: {
-        path : path.resolve(__dirname, "front/build"),
+        path : path.resolve(__dirname, "build"),
         filename:  '[name].js'
     },
     module: {
@@ -53,10 +57,19 @@ const webpackConfig  = {
                         minimize: true
                     }
                 }],
+            },
+            {
+                test: /\.vue$/,
+                use: [ 'vux-loader']
             }
         ]
-    }
+    },
+    plugins: [
+        new ConsoleLogOnBuildWebpackPlugin()
+    ]
 };
 
 
-module.exports = webpackConfig;
+module.exports = vuxLoader.merge(webpackConfig, {
+    plugins: ['vux-ui']
+});
