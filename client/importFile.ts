@@ -4,9 +4,9 @@ import formData = require("form-data");
 
 const MusicMeta = require("musicmetadata");
 
-
 const ROOT = "E:/KwDownload/song/";
-const HOST = "http://jinjing.duapp.com";
+// const HOST = "http://jinjing.duapp.com";
+const HOST = "http://127.0.0.1:18080";
 
 async function go(dir:string) {
     let result = fs.readdirSync(dir);

@@ -13,7 +13,8 @@ const fetch = require("node-fetch");
 const formData = require("form-data");
 const MusicMeta = require("musicmetadata");
 const ROOT = "E:/KwDownload/song/";
-const HOST = "http://jinjing.duapp.com";
+// const HOST = "http://jinjing.duapp.com";
+const HOST = "http://127.0.0.1:18080";
 function go(dir) {
     return __awaiter(this, void 0, void 0, function* () {
         let result = fs.readdirSync(dir);
