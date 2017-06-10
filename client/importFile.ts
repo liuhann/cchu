@@ -4,9 +4,11 @@ import formData = require("form-data");
 
 const MusicMeta = require("musicmetadata");
 
-const ROOT = "E:/KwDownload/song/";
-// const HOST = "http://jinjing.duapp.com";
-const HOST = "http://127.0.0.1:18080";
+// const ROOT = "F:/KwDownload/song/";
+const ROOT = "G:/讲故事";
+const HOST = "http://jinjing.duapp.com";
+const isUPload = false;
+// const HOST = "http://127.0.0.1:18080";
 
 async function go(dir:string) {
     let result = fs.readdirSync(dir);
@@ -24,13 +26,15 @@ async function go(dir:string) {
                     form.append('file', fs.createReadStream(fileFullPath));
                     form.append('path', fileFullPath.substr(ROOT.length));
 
-                    let uploadResult = await fetch(HOST + "/story/upload", {
-                        method: "POST",
-                        body: form
-                    });
-                    let resultJSON = await uploadResult.json();
-                    console.log(resultJSON);
-
+                    let resultJSON : any;
+                    if (isUPload) {
+                        let uploadResult = await fetch(HOST + "/story/upload", {
+                            method: "POST",
+                            body: form
+                        });
+                        resultJSON = await uploadResult.json();
+                        console.log(resultJSON);
+                    }
                     // await fetch(HOST+ "/story/create");
                     let result = await fetch(HOST + "/story/create", {
                         method: "POST",
@@ -44,10 +48,16 @@ async function go(dir:string) {
                             artist: musicMeta.artist,
                             path: fileFullPath.substr(ROOT.length),
                             duration: musicMeta.duration,
-                            fileId: resultJSON.id
+                            fileId: isUPload ? resultJSON.id : null
                         })
                     });
                     console.log('import file ', fileFullPath, ', result ' + result);
+
+                    await new Promise(function(resolve, reject) {
+                        setTimeout(()=>{
+                            resolve();
+                        }, 200)
+                    });
                 } catch (err) {
                     console.log(err);
                 }
@@ -74,7 +84,5 @@ async function readFileMeta(filePath:string):Promise<MM.Metadata> {
     });
 }
 
-
-
-// go(ROOT + "/微小宝睡前童话故事") ;
-go(ROOT);
+go(ROOT + "/飞飞姐姐说故事-童话故事集") ;
+// go(ROOT);

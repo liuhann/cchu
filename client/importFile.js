@@ -12,9 +12,11 @@ const fs = require("fs");
 const fetch = require("node-fetch");
 const formData = require("form-data");
 const MusicMeta = require("musicmetadata");
-const ROOT = "E:/KwDownload/song/";
-// const HOST = "http://jinjing.duapp.com";
-const HOST = "http://127.0.0.1:18080";
+// const ROOT = "F:/KwDownload/song/";
+const ROOT = "G:/讲故事";
+const HOST = "http://jinjing.duapp.com";
+const isUPload = false;
+// const HOST = "http://127.0.0.1:18080";
 function go(dir) {
     return __awaiter(this, void 0, void 0, function* () {
         let result = fs.readdirSync(dir);
@@ -29,12 +31,15 @@ function go(dir) {
                         let form = new formData();
                         form.append('file', fs.createReadStream(fileFullPath));
                         form.append('path', fileFullPath.substr(ROOT.length));
-                        let uploadResult = yield fetch(HOST + "/story/upload", {
-                            method: "POST",
-                            body: form
-                        });
-                        let resultJSON = yield uploadResult.json();
-                        console.log(resultJSON);
+                        let resultJSON;
+                        if (isUPload) {
+                            let uploadResult = yield fetch(HOST + "/story/upload", {
+                                method: "POST",
+                                body: form
+                            });
+                            resultJSON = yield uploadResult.json();
+                            console.log(resultJSON);
+                        }
                         // await fetch(HOST+ "/story/create");
                         let result = yield fetch(HOST + "/story/create", {
                             method: "POST",
@@ -48,10 +53,15 @@ function go(dir) {
                                 artist: musicMeta.artist,
                                 path: fileFullPath.substr(ROOT.length),
                                 duration: musicMeta.duration,
-                                fileId: resultJSON.id
+                                fileId: isUPload ? resultJSON.id : null
                             })
                         });
                         console.log('import file ', fileFullPath, ', result ' + result);
+                        yield new Promise(function (resolve, reject) {
+                            setTimeout(() => {
+                                resolve();
+                            }, 200);
+                        });
                     }
                     catch (err) {
                         console.log(err);
@@ -81,5 +91,5 @@ function readFileMeta(filePath) {
         });
     });
 }
-// go(ROOT + "/微小宝睡前童话故事") ;
-go(ROOT);
+go(ROOT + "/飞飞姐姐说故事-童话故事集");
+// go(ROOT);
