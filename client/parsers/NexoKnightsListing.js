@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const LoadParser_1 = require("../LoadParser");
 const ShieldParser_1 = require("./ShieldParser");
+const fs = require("fs");
 class NexoKnightsListing extends LoadParser_1.default {
     loadData(url) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -18,11 +19,9 @@ class NexoKnightsListing extends LoadParser_1.default {
             for (let elem of Array.from($('.table-responsive').first().find('tr'))) {
                 let shields = [];
                 for (let [i, a] of Array.from($(elem).find('a')).entries()) {
-                    if (i > 2)
-                        break;
                     let shield = {};
                     shield.href = 'http://www.spyrius.org' + $(a).attr('href');
-                    shield.src = $(a).find('img').attr('src');
+                    shield.src = 'http://www.spyrius.org' + $(a).find('img').attr('src');
                     shield.title = $(a).find('img').attr('title');
                     let checkLoaded = yield this.checkLoad(shield.href, 'lego-shield');
                     Object.assign(shield, checkLoaded);
@@ -39,7 +38,9 @@ function call() {
         LoadParser_1.default.addParser(new ShieldParser_1.default(), 'lego-shield');
         let nkl = new NexoKnightsListing();
         let data = yield nkl.loadData('http://www.spyrius.org/nexo/');
-        console.log(data);
+        fs.writeFile('nexo-shields.json', JSON.stringify(data), 'utf8', function () {
+            console.log('ok');
+        });
     });
 }
 call();
