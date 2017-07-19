@@ -1,0 +1,2848 @@
+[
+  [
+    {
+      "href": "http://www.spyrius.org/nexo/hawk-holler.html",
+      "src": "hawk-holler.jpg",
+      "title": "001 · Hawk Holler",
+      "fullImg": "hawk-holler.png",
+      "power": [
+        "/nexo/img/elements/hawk.png",
+        "/nexo/img/elements/note.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/backlash-lightning.html",
+      "src": "backlash-lightning.jpg",
+      "title": "002 · Backlash Lightning",
+      "fullImg": "backlash-lightning.png",
+      "power": [
+        "/nexo/img/elements/bolt.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/stronghold-of-resolution.html",
+      "src": "stronghold-of-resolution.jpg",
+      "title": "003 · Stronghold of Resolution",
+      "fullImg": "stronghold-of-resolution.png",
+      "power": [
+        "/nexo/img/elements/hawk.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/mech-master.html",
+      "src": "mech-master.jpg",
+      "title": "004 · Mech Master",
+      "fullImg": "mech-master.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/sword-tornado.html",
+      "src": "sword-tornado.jpg",
+      "title": "005 · Sword Tornado",
+      "fullImg": "sword-tornado.png",
+      "power": [
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/sea-dragon.html",
+      "src": "sea-dragon.jpg",
+      "title": "006 · Sea Dragon",
+      "fullImg": "sea-dragon.png",
+      "power": [
+        "/nexo/img/elements/dragon.png",
+        "/nexo/img/elements/water.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/backfire.html",
+      "src": "backfire.jpg",
+      "title": "007 · Backfire",
+      "fullImg": "backfire.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/egg-of-doom.html",
+      "src": "egg-of-doom.jpg",
+      "title": "008 · Egg of Doom",
+      "fullImg": "egg-of-doom.png",
+      "power": [
+        "/nexo/img/elements/monster.png",
+        "/nexo/img/elements/fork.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/croc-tears.html",
+      "src": "croc-tears.jpg",
+      "title": "009 · Croc Tears",
+      "fullImg": "croc-tears.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/water.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/ice-burst.html",
+      "src": "ice-burst.jpg",
+      "title": "010 · Ice Burst",
+      "fullImg": "ice-burst.png",
+      "power": [
+        "/nexo/img/elements/snow.png",
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/dragon-of-justice.html",
+      "src": "dragon-of-justice.jpg",
+      "title": "011 · Dragon of Justice",
+      "fullImg": "dragon-of-justice.png",
+      "power": [
+        "/nexo/img/elements/dragon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/formation-of-fortitude.html",
+      "src": "formation-of-fortitude.jpg",
+      "title": "012 · Formation of Fortitude",
+      "fullImg": "formation-of-fortitude.png",
+      "power": [
+        "/nexo/img/elements/magic.png",
+        "/nexo/img/elements/leaf.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/roaring-righteousness.html",
+      "src": "roaring-righteousness.jpg",
+      "title": "013 · Roaring Righteousness",
+      "fullImg": "roaring-righteousness.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/note.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/order-of-the-knights-code.html",
+      "src": "order-of-the-knights-code.jpg",
+      "title": "014 · Order of the Knights Code",
+      "fullImg": "order-of-the-knights-code.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/banana-bombs.html",
+      "src": "banana-bombs.jpg",
+      "title": "015 · Banana Bombs",
+      "fullImg": "banana-bombs.png",
+      "power": [
+        "/nexo/img/elements/fork.png",
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/beam-jump.html",
+      "src": "beam-jump.jpg",
+      "title": "016 · Beam Jump",
+      "fullImg": "beam-jump.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/rocketship.html",
+      "src": "rocketship.jpg",
+      "title": "017 · Rocketship",
+      "fullImg": "rocketship.png",
+      "power": [
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/veil-of-concealment.html",
+      "src": "veil-of-concealment.jpg",
+      "title": "018 · Veil of Concealment",
+      "fullImg": "veil-of-concealment.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/zap-zap.html",
+      "src": "zap-zap.jpg",
+      "title": "019 · Zap Zap",
+      "fullImg": "zap-zap.png",
+      "power": [
+        "/nexo/img/elements/bolt.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/ultra-armor-activate.html",
+      "src": "ultra-armor-activate.jpg",
+      "title": "020 · Ultra Armor Activate",
+      "fullImg": "ultra-armor-activate.png",
+      "power": [
+        "/nexo/img/elements/bolt.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/broom-of-doom.html",
+      "src": "broom-of-doom.jpg",
+      "title": "021 · Broom of Doom",
+      "fullImg": "broom-of-doom.png",
+      "power": [
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/minify-surprise.html",
+      "src": "minify-surprise.jpg",
+      "title": "022 · Minify Suprise",
+      "fullImg": "minify-surprise.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/brain-freeze.html",
+      "src": "brain-freeze.jpg",
+      "title": "023 · Brain Freeze",
+      "fullImg": "brain-freeze.png",
+      "power": [
+        "/nexo/img/elements/snow.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/whirlwind.html",
+      "src": "whirlwind.jpg",
+      "title": "024 · Whirlwind",
+      "fullImg": "whirlwind.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/giant-growth.html",
+      "src": "giant-growth.jpg",
+      "title": "025 · Giant Growth",
+      "fullImg": "giant-growth.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/raptor-bite.html",
+      "src": "raptor-bite.jpg",
+      "title": "026 · Raptor Bite",
+      "fullImg": "raptor-bite.png",
+      "power": [
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/cool-creation.html",
+      "src": "cool-creation.jpg",
+      "title": "027 · Cool Creation",
+      "fullImg": "cool-creation.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/shield-of-schooling-and-protecting.html",
+      "src": "shield-of-schooling-and-protecting.jpg",
+      "title": "028 · Shield of Schooling and Protection",
+      "fullImg": "shield-of-schooling-and-protecting.png",
+      "power": [
+        "/nexo/img/elements/hawk.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/hail-to-the-jester.html",
+      "src": "hail-to-the-jester.jpg",
+      "title": "029 · Hail to the Jester",
+      "fullImg": "hail-to-the-jester.png",
+      "power": [
+        "/nexo/img/elements/monster.png",
+        "/nexo/img/elements/note.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/fireflies.html",
+      "src": "fireflies.jpg",
+      "title": "030 · Fireflies",
+      "fullImg": "fireflies.png",
+      "power": [
+        "/nexo/img/elements/fire.png",
+        "/nexo/img/elements/bug.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/ship-wrecker.html",
+      "src": "ship-wrecker.jpg",
+      "title": "031 · Ship Wrecker",
+      "fullImg": "ship-wrecker.png",
+      "power": [
+        "/nexo/img/elements/water.png",
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/shadow-snail.html",
+      "src": "shadow-snail.jpg",
+      "title": "032 · Shadow Snail",
+      "fullImg": "shadow-snail.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/skull.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bear-claws.html",
+      "src": "bear-claws.jpg",
+      "title": "033 · Bear Claws",
+      "fullImg": "bear-claws.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/water-wall.html",
+      "src": "water-wall.jpg",
+      "title": "034 · Water Wall",
+      "fullImg": "water-wall.png",
+      "power": [
+        "/nexo/img/elements/water.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/air-portal.html",
+      "src": "air-portal.jpg",
+      "title": "035 · Air Portal",
+      "fullImg": "air-portal.png",
+      "power": [
+        "/nexo/img/elements/magic.png",
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/armadillo-shelter.html",
+      "src": "armadillo-shelter.jpg",
+      "title": "036 · Armadillo Shelter",
+      "fullImg": "armadillo-shelter.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bone-shaker.html",
+      "src": "bone-shaker.jpg",
+      "title": "038 · Bone Shaker",
+      "fullImg": "bone-shaker.png",
+      "power": [
+        "/nexo/img/elements/note.png",
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/chrome-bell.html",
+      "src": "chrome-bell.jpg",
+      "title": "039 · Chrome Bell",
+      "fullImg": "chrome-bell.png",
+      "power": [
+        "/nexo/img/elements/note.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/drop-the-beat.html",
+      "src": "drop-the-beat.jpg",
+      "title": "041 · Drop the Beat",
+      "fullImg": "drop-the-beat.png",
+      "power": [
+        "/nexo/img/elements/note.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/haunted-armor.html",
+      "src": "haunted-armor.jpg",
+      "title": "045 · Haunted Armor",
+      "fullImg": "haunted-armor.png",
+      "power": [
+        "/nexo/img/elements/monster.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/hornblower.html",
+      "src": "hornblower.jpg",
+      "title": "046 · Hornblower",
+      "fullImg": "hornblower.png",
+      "power": [
+        "/nexo/img/elements/note.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/ice-cream.html",
+      "src": "ice-cream.jpg",
+      "title": "047 · Ice Cream",
+      "fullImg": "ice-cream.png",
+      "power": [
+        "/nexo/img/elements/fork.png",
+        "/nexo/img/elements/snow.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/inverted-charge.html",
+      "src": "inverted-charge.jpg",
+      "title": "048 · Inverted Charge",
+      "fullImg": "inverted-charge.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/iron-dragon.html",
+      "src": "iron-dragon.jpg",
+      "title": "049 · Iron Dragon",
+      "fullImg": "iron-dragon.png",
+      "power": [
+        "/nexo/img/elements/dragon.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/jumperman.html",
+      "src": "jumperman.jpg",
+      "title": "050 · Jumperman",
+      "fullImg": "jumperman.png",
+      "power": [
+        "/nexo/img/elements/bomb.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/powder-keg.html",
+      "src": "powder-keg.jpg",
+      "title": "052 · Powder Keg",
+      "fullImg": "powder-keg.png",
+      "power": [
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/sir-tauntalot.html",
+      "src": "sir-tauntalot.jpg",
+      "title": "054 · Sir Tauntalot",
+      "fullImg": "sir-tauntalot.png",
+      "power": [
+        "/nexo/img/elements/sun.png",
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/squeeze-wrench.html",
+      "src": "squeeze-wrench.jpg",
+      "title": "055 · Squeeze Wrench",
+      "fullImg": "squeeze-wrench.png",
+      "power": [
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/yeti-sneeze.html",
+      "src": "yeti-sneeze.jpg",
+      "title": "056 · Yeti Sneeze",
+      "fullImg": "yeti-sneeze.png",
+      "power": [
+        "/nexo/img/elements/snow.png",
+        "/nexo/img/elements/water.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/ticking-baboon.html",
+      "src": "ticking-baboon.jpg",
+      "title": "057 · Ticking Baboon",
+      "fullImg": "ticking-baboon.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/titanium-sword.html",
+      "src": "titanium-sword.jpg",
+      "title": "058 · Titanium Sword",
+      "fullImg": "titanium-sword.png",
+      "power": [
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/collapsing-crumble.html",
+      "src": "collapsing-crumble.jpg",
+      "title": "060 · Collapsing Crumble",
+      "fullImg": "collapsing-crumble.png",
+      "power": [
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/corrupting-crush.html",
+      "src": "corrupting-crush.jpg",
+      "title": "061 · Corrupting Crush",
+      "fullImg": "corrupting-crush.png",
+      "power": [
+        "/nexo/img/elements/snow.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/vicious-voltage.html",
+      "src": "vicious-voltage.jpg",
+      "title": "062 · Vicious Voltage",
+      "fullImg": "vicious-voltage.png",
+      "power": [
+        "/nexo/img/elements/sun.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/thundering-thrash.html",
+      "src": "thundering-thrash.jpg",
+      "title": "065 · Thundering Thrash",
+      "fullImg": "thundering-thrash.png",
+      "power": [
+        "/nexo/img/elements/bolt.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/wedgie-of-doom.html",
+      "src": "wedgie-of-doom.jpg",
+      "title": "066 · Wedgie of Doom",
+      "fullImg": "wedgie-of-doom.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/cosmic-invasion.html",
+      "src": "cosmic-invasion.jpg",
+      "title": "067 · Cosmic Invasion",
+      "fullImg": "cosmic-invasion.png",
+      "power": [
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/electric-bubble.html",
+      "src": "electric-bubble.jpg",
+      "title": "068 · Electric Bubble",
+      "fullImg": "electric-bubble.png",
+      "power": [
+        "/nexo/img/elements/water.png",
+        "/nexo/img/elements/bolt.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/magicians-hat.html",
+      "src": "magicians-hat.jpg",
+      "title": "069 · Magician's Hat",
+      "fullImg": "magicians-hat.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    }
+  ],
+  [
+    {
+      "href": "http://www.spyrius.org/nexo/super-human-speed.html",
+      "src": "super-human-speed.jpg",
+      "title": "101 · Super Human Speed",
+      "fullImg": "super-human-speed.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/rolling-fireball.html",
+      "src": "rolling-fireball.jpg",
+      "title": "102 · Rolling Fireball",
+      "fullImg": "rolling-fireball.png",
+      "power": [
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/arrow-strike.html",
+      "src": "arrow-strike.jpg",
+      "title": "103 · Arrow Strike",
+      "fullImg": "arrow-strike.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/poison-burst.html",
+      "src": "poison-burst.jpg",
+      "title": "104 · Poison Burst",
+      "fullImg": "poison-burst.png",
+      "power": [
+        "/nexo/img/elements/skull.png",
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/jungle-dragon.html",
+      "src": "jungle-dragon.jpg",
+      "title": "105 · Jungle Dragon",
+      "fullImg": "jungle-dragon.png",
+      "power": [
+        "/nexo/img/elements/dragon.png",
+        "/nexo/img/elements/leaf.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/dynamighty.html",
+      "src": "dynamighty.jpg",
+      "title": "106 · Dynamighty",
+      "fullImg": "dynamighty.png",
+      "power": [
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/venom-bite.html",
+      "src": "venom-bite.jpg",
+      "title": "107 · Venom Bite",
+      "fullImg": "venom-bite.png",
+      "power": [
+        "/nexo/img/elements/skull.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/slime-blast.html",
+      "src": "slime-blast.jpg",
+      "title": "108 · Slime Blast",
+      "fullImg": "slime-blast.png",
+      "power": [
+        "/nexo/img/elements/skull.png",
+        "/nexo/img/elements/water.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/time-breach.html",
+      "src": "time-breach.jpg",
+      "title": "109 · Time Breach",
+      "fullImg": "time-breach.png",
+      "power": [
+        "/nexo/img/elements/hawk.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/swift-sting.html",
+      "src": "swift-sting.jpg",
+      "title": "110 · Swift Sting",
+      "fullImg": "swift-sting.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bonkers-beans.html",
+      "src": "bonkers-beans.jpg",
+      "title": "111 · Bonkers Beans",
+      "fullImg": "bonkers-beans.png",
+      "power": [
+        "/nexo/img/elements/leaf.png",
+        "/nexo/img/elements/fork.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/lion-of-bravery.html",
+      "src": "lion-of-bravery.jpg",
+      "title": "112 · Lion of Bravery",
+      "fullImg": "lion-of-bravery.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/flight-of-the-phoenix.html",
+      "src": "flight-of-the-phoenix.jpg",
+      "title": "113 · Flight of the Phoenix",
+      "fullImg": "flight-of-the-phoenix.png",
+      "power": [
+        "/nexo/img/elements/hawk.png",
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/supersonic-shield.html",
+      "src": "supersonic-shield.jpg",
+      "title": "114 · Supersonic Shield",
+      "fullImg": "supersonic-shield.png",
+      "power": [
+        "/nexo/img/elements/bolt.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/moth-swarm.html",
+      "src": "moth-swarm.jpg",
+      "title": "115 · Moth Swarm",
+      "fullImg": "moth-swarm.png",
+      "power": [
+        "/nexo/img/elements/bug.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/dazzling-lure.html",
+      "src": "dazzling-lure.jpg",
+      "title": "116 · Dazzling Lure",
+      "fullImg": "dazzling-lure.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/sun.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bullfrog-superbound.html",
+      "src": "bullfrog-superbound.jpg",
+      "title": "117 · Bullfrog Superbound",
+      "fullImg": "bullfrog-superbound.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/sour-strike.html",
+      "src": "sour-strike.jpg",
+      "title": "118 · Sour Strike",
+      "fullImg": "sour-strike.png",
+      "power": [
+        "/nexo/img/elements/skull.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/broccoli-tornado.html",
+      "src": "broccoli-tornado.jpg",
+      "title": "119 · Broccoli Tornado",
+      "fullImg": "broccoli-tornado.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/fork.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/mouse-trap.html",
+      "src": "mouse-trap.jpg",
+      "title": "120 · Mouse Trap",
+      "fullImg": "mouse-trap.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/fork.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/adrenaline-rush.html",
+      "src": "adrenaline-rush.jpg",
+      "title": "121 · Adrenaline Rush",
+      "fullImg": "adrenaline-rush.png",
+      "power": [
+        "/nexo/img/elements/bolt.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/ice-rain.html",
+      "src": "ice-rain.jpg",
+      "title": "122 · Ice Rain",
+      "fullImg": "ice-rain.png",
+      "power": [
+        "/nexo/img/elements/snow.png",
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/stone-stun.html",
+      "src": "stone-stun.jpg",
+      "title": "123 · Stone Stun",
+      "fullImg": "stone-stun.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/gaze-of-the-gorgon.html",
+      "src": "gaze-of-the-gorgon.jpg",
+      "title": "124 · Gaze of the Gorgon",
+      "fullImg": "gaze-of-the-gorgon.png",
+      "power": [
+        "/nexo/img/elements/monster.png",
+        "/nexo/img/elements/skull.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/serpent-of-anti-virus.html",
+      "src": "serpent-of-anti-virus.jpg",
+      "title": "125 · Serpent of Anti Virus",
+      "fullImg": "serpent-of-anti-virus.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/magic-anti-evil-ultra-armour-upgrade.html",
+      "src": "magic-anti-evil-ultra-armour-upgrade.jpg",
+      "title": "126 · Magic Anti Evil Ultra Armour Upgrade",
+      "fullImg": "magic-anti-evil-ultra-armour-upgrade.png",
+      "power": [
+        "/nexo/img/elements/fire.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/snake-den.html",
+      "src": "snake-den.jpg",
+      "title": "127 · Snake Den",
+      "fullImg": "snake-den.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/funky-fungus.html",
+      "src": "funky-fungus.jpg",
+      "title": "128 · Funky Fungus",
+      "fullImg": "funky-fungus.png",
+      "power": [
+        "/nexo/img/elements/leaf.png",
+        "/nexo/img/elements/note.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/transformation.html",
+      "src": "transformation.jpg",
+      "title": "129 · Transformation",
+      "fullImg": "transformation.png",
+      "power": [
+        "/nexo/img/elements/hawk.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/sidekick.html",
+      "src": "sidekick.jpg",
+      "title": "130 · Sidekick",
+      "fullImg": "sidekick.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/snapper-stand.html",
+      "src": "snapper-stand.jpg",
+      "title": "131 · Snapper Stand",
+      "fullImg": "snapper-stand.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/depth-charge.html",
+      "src": "depth-charge.jpg",
+      "title": "132 · Depth Charge",
+      "fullImg": "depth-charge.png",
+      "power": [
+        "/nexo/img/elements/rock.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bear-the-brunt.html",
+      "src": "bear-the-brunt.jpg",
+      "title": "134 · Bear the Brunt",
+      "fullImg": "bear-the-brunt.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/note.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/blast-mask.html",
+      "src": "blast-mask.jpg",
+      "title": "135 · Blast Mask",
+      "fullImg": "blast-mask.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/boom-stick.html",
+      "src": "boom-stick.jpg",
+      "title": "136 · Boom Stick",
+      "fullImg": "boom-stick.png",
+      "power": [
+        "/nexo/img/elements/leaf.png",
+        "/nexo/img/elements/sun.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bowmaster.html",
+      "src": "bowmaster.jpg",
+      "title": "137 · Bowmaster",
+      "fullImg": "bowmaster.png",
+      "power": [
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/candy-floss.html",
+      "src": "candy-floss.jpg",
+      "title": "138 · Candy Floss",
+      "fullImg": "candy-floss.png",
+      "power": [
+        "/nexo/img/elements/fork.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/gamma-rays.html",
+      "src": "gamma-rays.jpg",
+      "title": "141 · Gamma Rays",
+      "fullImg": "gamma-rays.png",
+      "power": [
+        "/nexo/img/elements/sun.png",
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/gorilla-roar.html",
+      "src": "gorilla-roar.jpg",
+      "title": "142 · Gorilla Roar",
+      "fullImg": "gorilla-roar.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/note.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/honey-bees.html",
+      "src": "honey-bees.jpg",
+      "title": "143 · Honey Bees",
+      "fullImg": "honey-bees.png",
+      "power": [
+        "/nexo/img/elements/bug.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/mechanical-griffin.html",
+      "src": "mechanical-griffin.jpg",
+      "title": "145 · Mechanical Griffin",
+      "fullImg": "mechanical-griffin.png",
+      "power": [
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/orbital-strike.html",
+      "src": "orbital-strike.jpg",
+      "title": "147 · Orbital Strike",
+      "fullImg": "orbital-strike.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/bolt.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/out-of-soap.html",
+      "src": "out-of-soap.jpg",
+      "title": "148 · Out of Soap",
+      "fullImg": "out-of-soap.png",
+      "power": [
+        "/nexo/img/elements/skull.png",
+        "/nexo/img/elements/water.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/paprika-bolt.html",
+      "src": "paprika-bolt.jpg",
+      "title": "149 · Paprika Bolt",
+      "fullImg": "paprika-bolt.png",
+      "power": [
+        "/nexo/img/elements/fork.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/seagull-bomb.html",
+      "src": "seagull-bomb.jpg",
+      "title": "151 · Seagull Bomb",
+      "fullImg": "seagull-bomb.png",
+      "power": [
+        "/nexo/img/elements/bomb.png",
+        "/nexo/img/elements/hawk.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/slime-slugs.html",
+      "src": "slime-slugs.jpg",
+      "title": "152 · Slime Slugs",
+      "fullImg": "slime-slugs.png",
+      "power": [
+        "/nexo/img/elements/bug.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/tone-of-power.html",
+      "src": "tone-of-power.jpg",
+      "title": "154 · Tone of Power",
+      "fullImg": "tone-of-power.png",
+      "power": [
+        "/nexo/img/elements/note.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/ravaging-rot.html",
+      "src": "ravaging-rot.jpg",
+      "title": "158 · Ravaging Rot",
+      "fullImg": "ravaging-rot.png",
+      "power": [
+        "/nexo/img/elements/leaf.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/roto-sentry.html",
+      "src": "roto-sentry.jpg",
+      "title": "159 · Roto Sentry",
+      "fullImg": "roto-sentry.png",
+      "power": [
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/devastating-decay.html",
+      "src": "devastating-decay.jpg",
+      "title": "160 · Devastating Decay",
+      "fullImg": "devastating-decay.png",
+      "power": [
+        "/nexo/img/elements/fork.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/tech-tree.html",
+      "src": "tech-tree.jpg",
+      "title": "161 · Tech Tree",
+      "fullImg": "tech-tree.png",
+      "power": [
+        "/nexo/img/elements/leaf.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/devious-demolition.html",
+      "src": "devious-demolition.jpg",
+      "title": "162 · Devious Demolition",
+      "fullImg": "devious-demolition.png",
+      "power": [
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/living-glue.html",
+      "src": "living-glue.jpg",
+      "title": "164 · Living Glue",
+      "fullImg": "living-glue.png",
+      "power": [
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/unicorn-might.html",
+      "src": "unicorn-might.jpg",
+      "title": "165 · Unicorn Might",
+      "fullImg": "unicorn-might.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/power-of-squirrel.html",
+      "src": "power-of-squirrel.jpg",
+      "title": "166 · Power of Squirrel",
+      "fullImg": "power-of-squirrel.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    }
+  ],
+  [
+    {
+      "href": "http://www.spyrius.org/nexo/rushing-strike.html",
+      "src": "rushing-strike.jpg",
+      "title": "201 · Rushing Strike",
+      "fullImg": "rushing-strike.png",
+      "power": [
+        "/nexo/img/elements/dragon.png",
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/clapperclaw.html",
+      "src": "clapperclaw.jpg",
+      "title": "202 · Clapperclaw",
+      "fullImg": "clapperclaw.png",
+      "power": [
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/mace-rain.html",
+      "src": "mace-rain.jpg",
+      "title": "203 · Mace Rain",
+      "fullImg": "mace-rain.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/globlin-attack.html",
+      "src": "globlin-attack.jpg",
+      "title": "204 · Globlin Attack",
+      "fullImg": "globlin-attack.png",
+      "power": [
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/incinerate.html",
+      "src": "incinerate.jpg",
+      "title": "205 · Incinerate",
+      "fullImg": "incinerate.png",
+      "power": [
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/lava-dragon.html",
+      "src": "lava-dragon.jpg",
+      "title": "206 · Lava Dragon",
+      "fullImg": "lava-dragon.png",
+      "power": [
+        "/nexo/img/elements/dragon.png",
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/charging-attack.html",
+      "src": "charging-attack.jpg",
+      "title": "207 · Charging Attack",
+      "fullImg": "charging-attack.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/blade-of-bravery.html",
+      "src": "blade-of-bravery.jpg",
+      "title": "208 · Blade of Bravery",
+      "fullImg": "blade-of-bravery.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/soaring-eagle.html",
+      "src": "soaring-eagle.jpg",
+      "title": "209 · Soaring Eagle",
+      "fullImg": "soaring-eagle.png",
+      "power": [
+        "/nexo/img/elements/hawk.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/toxic-sting.html",
+      "src": "toxic-sting.jpg",
+      "title": "210 · Toxic Sting",
+      "fullImg": "toxic-sting.png",
+      "power": [
+        "/nexo/img/elements/bug.png",
+        "/nexo/img/elements/skull.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/prism-of-clarity.html",
+      "src": "prism-of-clarity.jpg",
+      "title": "211 · Prism of Clarity",
+      "fullImg": "prism-of-clarity.png",
+      "power": [
+        "/nexo/img/elements/sun.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/magma-burst.html",
+      "src": "magma-burst.jpg",
+      "title": "212 · Magma Burst",
+      "fullImg": "magma-burst.png",
+      "power": [
+        "/nexo/img/elements/fire.png",
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/alliance-of-the-fortrex.html",
+      "src": "alliance-of-the-fortrex.jpg",
+      "title": "213 · Alliance of the Fortrex",
+      "fullImg": "alliance-of-the-fortrex.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/glory-of-knighton.html",
+      "src": "glory-of-knighton.jpg",
+      "title": "214 · Glory of Knighton",
+      "fullImg": "glory-of-knighton.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/cyclonic-strike.html",
+      "src": "cyclonic-strike.jpg",
+      "title": "215 · Cyclonic Strike",
+      "fullImg": "cyclonic-strike.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/piranha-bite.html",
+      "src": "piranha-bite.jpg",
+      "title": "216 · Piranha Bite",
+      "fullImg": "piranha-bite.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/dark-drop.html",
+      "src": "dark-drop.jpg",
+      "title": "217 · Dark Drop",
+      "fullImg": "dark-drop.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/skull.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/anvil-of-trouble.html",
+      "src": "anvil-of-trouble.jpg",
+      "title": "218 · Anvil of Trouble",
+      "fullImg": "anvil-of-trouble.png",
+      "power": [
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/hyper-kick.html",
+      "src": "hyper-kick.jpg",
+      "title": "219 · Hyper Kick",
+      "fullImg": "hyper-kick.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/whiplash.html",
+      "src": "whiplash.jpg",
+      "title": "220 · Whiplash",
+      "fullImg": "whiplash.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/royal-brawl.html",
+      "src": "royal-brawl.jpg",
+      "title": "221 · Royal Brawl",
+      "fullImg": "royal-brawl.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/goo-geyser.html",
+      "src": "goo-geyser.jpg",
+      "title": "222 · Goo Geyser",
+      "fullImg": "goo-geyser.png",
+      "power": [
+        "/nexo/img/elements/skull.png",
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bomb-blast.html",
+      "src": "bomb-blast.jpg",
+      "title": "223 · Bomb Blast",
+      "fullImg": "bomb-blast.png",
+      "power": [
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/rock-ripper.html",
+      "src": "rock-ripper.jpg",
+      "title": "224 · Rock Ripper",
+      "fullImg": "rock-ripper.png",
+      "power": [
+        "/nexo/img/elements/rock.png",
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/majesty-of-benevolence.html",
+      "src": "majesty-of-benevolence.jpg",
+      "title": "225 · Majesty of Benevolence",
+      "fullImg": "majesty-of-benevolence.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/chimera-of-courtesy.html",
+      "src": "chimera-of-courtesy.jpg",
+      "title": "226 · Chimera of Courtesy",
+      "fullImg": "chimera-of-courtesy.png",
+      "power": [
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bubble-gum-misfire.html",
+      "src": "bubble-gum-misfire.jpg",
+      "title": "227 · Bubble Gum Misfire",
+      "fullImg": "bubble-gum-misfire.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/fork.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/force-of-nature.html",
+      "src": "force-of-nature.jpg",
+      "title": "228 · Force of Nature",
+      "fullImg": "force-of-nature.png",
+      "power": [
+        "/nexo/img/elements/leaf.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/manowar.html",
+      "src": "manowar.jpg",
+      "title": "229 · Manowar",
+      "fullImg": "manowar.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/saber-slash.html",
+      "src": "saber-slash.jpg",
+      "title": "230 · Saber Slash",
+      "fullImg": "saber-slash.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/stone-spike.html",
+      "src": "stone-spike.jpg",
+      "title": "231 · Stone Spike",
+      "fullImg": "stone-spike.png",
+      "power": [
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/skunk-stench.html",
+      "src": "skunk-stench.jpg",
+      "title": "232 · Skunk Stench",
+      "fullImg": "skunk-stench.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/skull.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/sparrow-tornado.html",
+      "src": "sparrow-tornado.jpg",
+      "title": "233 · Sparrow Tornado",
+      "fullImg": "sparrow-tornado.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/hawk.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/quicksand.html",
+      "src": "quicksand.jpg",
+      "title": "234 · Quicksand",
+      "fullImg": "quicksand.png",
+      "power": [
+        "/nexo/img/elements/rock.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/black-lobster-claws.html",
+      "src": "black-lobster-claws.jpg",
+      "title": "236 · Black Lobster Claws",
+      "fullImg": "black-lobster-claws.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/triple-backstab.html",
+      "src": "triple-backstab.jpg",
+      "title": "237 · Triple Backstab",
+      "fullImg": "triple-backstab.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bull-race.html",
+      "src": "bull-race.jpg",
+      "title": "238 · Bull Race",
+      "fullImg": "bull-race.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/burnt-hot-dog.html",
+      "src": "burnt-hot-dog.jpg",
+      "title": "239 · Burnt Hot Dog",
+      "fullImg": "burnt-hot-dog.png",
+      "power": [
+        "/nexo/img/elements/fork.png",
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/commanding-shout.html",
+      "src": "commanding-shout.jpg",
+      "title": "240 · Commanding Shout",
+      "fullImg": "commanding-shout.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/note.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/crimson-bat.html",
+      "src": "crimson-bat.jpg",
+      "title": "241 · Crimson Bat",
+      "fullImg": "crimson-bat.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/lord-helmet.html",
+      "src": "lord-helmet.jpg",
+      "title": "242 · Lord Helmet",
+      "fullImg": "lord-helmet.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/bolt.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/lucky-break.html",
+      "src": "lucky-break.jpg",
+      "title": "243 · Lucky Break",
+      "fullImg": "lucky-break.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/manic-pumpkin.html",
+      "src": "manic-pumpkin.jpg",
+      "title": "244 · Manic Pumpkin",
+      "fullImg": "manic-pumpkin.png",
+      "power": [
+        "/nexo/img/elements/fork.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/mirror-me.html",
+      "src": "mirror-me.jpg",
+      "title": "245 · Mirror Me",
+      "fullImg": "mirror-me.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/ninja-strike.html",
+      "src": "ninja-strike.jpg",
+      "title": "247 · Ninja Strike",
+      "fullImg": "ninja-strike.png",
+      "power": [
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/power-glue.html",
+      "src": "power-glue.jpg",
+      "title": "248 · Power Glue",
+      "fullImg": "power-glue.png",
+      "power": [
+        "/nexo/img/elements/water.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/prune-juice.html",
+      "src": "prune-juice.jpg",
+      "title": "249 · Prune Juice",
+      "fullImg": "prune-juice.png",
+      "power": [
+        "/nexo/img/elements/fork.png",
+        "/nexo/img/elements/skull.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/silver-pegasus.html",
+      "src": "silver-pegasus.jpg",
+      "title": "250 · Silver Pegasus",
+      "fullImg": "silver-pegasus.png",
+      "power": [
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/speed-elixir.html",
+      "src": "speed-elixir.jpg",
+      "title": "252 · Speed Elixir",
+      "fullImg": "speed-elixir.png",
+      "power": [
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/swiss-cheese.html",
+      "src": "swiss-cheese.jpg",
+      "title": "253 · Swiss Cheese",
+      "fullImg": "swiss-cheese.png",
+      "power": [
+        "/nexo/img/elements/fork.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/turbo-kitty.html",
+      "src": "turbo-kitty.jpg",
+      "title": "255 · Turbo Kitty",
+      "fullImg": "turbo-kitty.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/bolt.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/wrecking-ball.html",
+      "src": "wrecking-ball.jpg",
+      "title": "256 · Wrecking Ball",
+      "fullImg": "wrecking-ball.png",
+      "power": [
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/relentless-rust.html",
+      "src": "relentless-rust.jpg",
+      "title": "258 · Relentless Rust",
+      "fullImg": "relentless-rust.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/wrecking-wrath.html",
+      "src": "wrecking-wrath.jpg",
+      "title": "259 · Wrecking Wrath",
+      "fullImg": "wrecking-wrath.png",
+      "power": [
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/court-jester.html",
+      "src": "court-jester.jpg",
+      "title": "260 · Court Jester",
+      "fullImg": "court-jester.png",
+      "power": [
+        "/nexo/img/elements/magic.png",
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/rock-and-rumble.html",
+      "src": "rock-and-rumble.jpg",
+      "title": "263 · Rock n'Rumble",
+      "fullImg": "rock-and-rumble.png",
+      "power": [
+        "/nexo/img/elements/rock.png",
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/special-delivery.html",
+      "src": "special-delivery.jpg",
+      "title": "264 · Special Delivery",
+      "fullImg": "special-delivery.png",
+      "power": [
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/love-power.html",
+      "src": "love-power.jpg",
+      "title": "266 · Love Power",
+      "fullImg": "love-power.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/wisdom-key.html",
+      "src": "wisdom-key.jpg",
+      "title": "267 · Wisdom Key",
+      "fullImg": "wisdom-key.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    }
+  ],
+  [
+    {
+      "href": "http://www.spyrius.org/nexo/tractor-beam.html",
+      "src": "tractor-beam.jpg",
+      "title": "301 · Tractor Beam",
+      "fullImg": "tractor-beam.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/cloning.html",
+      "src": "cloning.jpg",
+      "title": "302 · Cloning",
+      "fullImg": "cloning.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/chicken-power.html",
+      "src": "chicken-power.jpg",
+      "title": "303 · Chicken Power",
+      "fullImg": "chicken-power.png",
+      "power": [
+        "/nexo/img/elements/hawk.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/spirit-vortex.html",
+      "src": "spirit-vortex.jpg",
+      "title": "304 · Spirit Vortex",
+      "fullImg": "spirit-vortex.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/beetle-bomb.html",
+      "src": "beetle-bomb.jpg",
+      "title": "305 · Beetle Bomb",
+      "fullImg": "beetle-bomb.png",
+      "power": [
+        "/nexo/img/elements/bug.png",
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/force-field.html",
+      "src": "force-field.jpg",
+      "title": "306 · Force Field",
+      "fullImg": "force-field.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/take-off.html",
+      "src": "take-off.jpg",
+      "title": "307 · Take Off",
+      "fullImg": "take-off.png",
+      "power": [
+        "/nexo/img/elements/hawk.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/ice-dragon.html",
+      "src": "ice-dragon.jpg",
+      "title": "308 · Ice Dragon",
+      "fullImg": "ice-dragon.png",
+      "power": [
+        "/nexo/img/elements/dragon.png",
+        "/nexo/img/elements/snow.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/dazzling-hero.html",
+      "src": "dazzling-hero.jpg",
+      "title": "309 · Dazzling Hero",
+      "fullImg": "dazzling-hero.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/boomerang.html",
+      "src": "boomerang.jpg",
+      "title": "310 · Boomerang",
+      "fullImg": "boomerang.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/thunder-blaze.html",
+      "src": "thunder-blaze.jpg",
+      "title": "311 · Thunder Blaze",
+      "fullImg": "thunder-blaze.png",
+      "power": [
+        "/nexo/img/elements/bolt.png",
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/wild-boar.html",
+      "src": "wild-boar.jpg",
+      "title": "312 · Wild Boar",
+      "fullImg": "wild-boar.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/light-burst.html",
+      "src": "light-burst.jpg",
+      "title": "313 · Light Burst",
+      "fullImg": "light-burst.png",
+      "power": [
+        "/nexo/img/elements/bomb.png",
+        "/nexo/img/elements/sun.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/avenging-ultra-armor.html",
+      "src": "avenging-ultra-armor.jpg",
+      "title": "314 · Avenging Ultra Armor",
+      "fullImg": "avenging-ultra-armor.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/sword-of-strength-and-supremacy.html",
+      "src": "sword-of-strength-and-supremacy.jpg",
+      "title": "315 · Sword of Strength and Supremacy",
+      "fullImg": "sword-of-strength-and-supremacy.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/mighty-pen.html",
+      "src": "mighty-pen.jpg",
+      "title": "316 · Mighty Pen",
+      "fullImg": "mighty-pen.png",
+      "power": [
+        "/nexo/img/elements/hawk.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/greatest-hits.html",
+      "src": "greatest-hits.jpg",
+      "title": "317 · Greatest Hits",
+      "fullImg": "greatest-hits.png",
+      "power": [
+        "/nexo/img/elements/note.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/disco-frenzy.html",
+      "src": "disco-frenzy.jpg",
+      "title": "318 · Disco Frenzy",
+      "fullImg": "disco-frenzy.png",
+      "power": [
+        "/nexo/img/elements/sun.png",
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/silver-whip.html",
+      "src": "silver-whip.jpg",
+      "title": "319 · Silver Whip",
+      "fullImg": "silver-whip.png",
+      "power": [
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/champion-of-chivalry.html",
+      "src": "champion-of-chivalry.jpg",
+      "title": "320 · Champion of Chivalry",
+      "fullImg": "champion-of-chivalry.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/pinball-magician.html",
+      "src": "pinball-magician.jpg",
+      "title": "321 · Pinball Magician",
+      "fullImg": "pinball-magician.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/flash-cannon.html",
+      "src": "flash-cannon.jpg",
+      "title": "322 · Flash Cannon",
+      "fullImg": "flash-cannon.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/sun.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/magnetize.html",
+      "src": "magnetize.jpg",
+      "title": "323 · Magnetize",
+      "fullImg": "magnetize.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/draining-scarf.html",
+      "src": "draining-scarf.jpg",
+      "title": "324 · Draining Scarf",
+      "fullImg": "draining-scarf.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/max-power.html",
+      "src": "max-power.jpg",
+      "title": "325 · Max Power",
+      "fullImg": "max-power.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/griffon-of-graciousness.html",
+      "src": "griffon-of-graciousness.jpg",
+      "title": "326 · Griffon of Graciousness",
+      "fullImg": "griffon-of-graciousness.png",
+      "power": [
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/daring-deliverance.html",
+      "src": "daring-deliverance.jpg",
+      "title": "327 · Daring Deliverance",
+      "fullImg": "daring-deliverance.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/starfall.html",
+      "src": "starfall.jpg",
+      "title": "328 · Starfall",
+      "fullImg": "starfall.png",
+      "power": [
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/rat-tide.html",
+      "src": "rat-tide.jpg",
+      "title": "329 · Rat Tide",
+      "fullImg": "rat-tide.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/golden-touch.html",
+      "src": "golden-touch.jpg",
+      "title": "330 · Golden Touch",
+      "fullImg": "golden-touch.png",
+      "power": [
+        "/nexo/img/elements/fork.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/silk-spider.html",
+      "src": "silk-spider.jpg",
+      "title": "331 · Silk Spider",
+      "fullImg": "silk-spider.png",
+      "power": [
+        "/nexo/img/elements/bug.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/sand-tornado.html",
+      "src": "sand-tornado.jpg",
+      "title": "332 · Sand Tornado",
+      "fullImg": "sand-tornado.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/spin-drifter.html",
+      "src": "spin-drifter.jpg",
+      "title": "333 · Spin Drifter",
+      "fullImg": "spin-drifter.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/water.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/globe-of-light.html",
+      "src": "globe-of-light.jpg",
+      "title": "334 · Globe Of Light",
+      "fullImg": "globe-of-light.png",
+      "power": [
+        "/nexo/img/elements/sun.png",
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/quake-ball.html",
+      "src": "quake-ball.jpg",
+      "title": "335 · Quake Ball",
+      "fullImg": "quake-ball.png",
+      "power": [
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/power-of-united-knights.html",
+      "src": "power-of-united-knights.jpg",
+      "title": "336 · Power of United Knights",
+      "fullImg": "power-of-united-knights.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/algebra-gamble.html",
+      "src": "algebra-gamble.jpg",
+      "title": "337 · Algebra Gamble",
+      "fullImg": "algebra-gamble.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/arctic-breath.html",
+      "src": "arctic-breath.jpg",
+      "title": "338 · Arctic Breath",
+      "fullImg": "arctic-breath.png",
+      "power": [
+        "/nexo/img/elements/snow.png",
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bad-reputation.html",
+      "src": "bad-reputation.jpg",
+      "title": "339 · Bad Reputation",
+      "fullImg": "bad-reputation.png",
+      "power": [
+        "/nexo/img/elements/magic.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/battle-cry.html",
+      "src": "battle-cry.jpg",
+      "title": "340 · Battle Cry",
+      "fullImg": "battle-cry.png",
+      "power": [
+        "/nexo/img/elements/note.png",
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bearded-ballerina.html",
+      "src": "bearded-ballerina.jpg",
+      "title": "341 · Bearded Ballerina",
+      "fullImg": "bearded-ballerina.png",
+      "power": [
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bowling-cyclone.html",
+      "src": "bowling-cyclone.jpg",
+      "title": "343 · Bowling Cyclone",
+      "fullImg": "bowling-cyclone.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/broken-heart.html",
+      "src": "broken-heart.jpg",
+      "title": "344 · Broken Heart",
+      "fullImg": "broken-heart.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/carrot-missile.html",
+      "src": "carrot-missile.jpg",
+      "title": "345 · Carrot Missile",
+      "fullImg": "carrot-missile.png",
+      "power": [
+        "/nexo/img/elements/fork.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/centaur-charge.html",
+      "src": "centaur-charge.jpg",
+      "title": "346 · Centaur Charge",
+      "fullImg": "centaur-charge.png",
+      "power": [
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/cobra-backstab.html",
+      "src": "cobra-backstab.jpg",
+      "title": "347 · Cobra Backstab",
+      "fullImg": "cobra-backstab.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/diamond-spear.html",
+      "src": "diamond-spear.jpg",
+      "title": "348 · Diamond Spear",
+      "fullImg": "diamond-spear.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/goose-bumps.html",
+      "src": "goose-bumps.jpg",
+      "title": "349 · Goose Bumps",
+      "fullImg": "goose-bumps.png",
+      "power": [
+        "/nexo/img/elements/hawk.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/loadmaster.html",
+      "src": "loadmaster.jpg",
+      "title": "352 · Loadmaster",
+      "fullImg": "loadmaster.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/mammoth.html",
+      "src": "mammoth.jpg",
+      "title": "353 · Mammoth",
+      "fullImg": "mammoth.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/mantis-embrace.html",
+      "src": "mantis-embrace.jpg",
+      "title": "354 · Mantis Embrace",
+      "fullImg": "mantis-embrace.png",
+      "power": [
+        "/nexo/img/elements/bug.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/metal-minotaur.html",
+      "src": "metal-minotaur.jpg",
+      "title": "355 · Metal Minotaur",
+      "fullImg": "metal-minotaur.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/mindbender.html",
+      "src": "mindbender.jpg",
+      "title": "356 · Mindbender",
+      "fullImg": "mindbender.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/porcupine-hug.html",
+      "src": "porcupine-hug.jpg",
+      "title": "358 · Porcupine Hug",
+      "fullImg": "porcupine-hug.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/rolling-hedgehog.html",
+      "src": "rolling-hedgehog.jpg",
+      "title": "360 · Rolling Hedgehog",
+      "fullImg": "rolling-hedgehog.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/stunning-showmanship.html",
+      "src": "stunning-showmanship.jpg",
+      "title": "362 · Stunning Showmanship",
+      "fullImg": "stunning-showmanship.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/shocking-scare.html",
+      "src": "shocking-scare.jpg",
+      "title": "365 · Shocking Scare",
+      "fullImg": "shocking-scare.png",
+      "power": [
+        "/nexo/img/elements/hawk.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/dreadful-disintegration.html",
+      "src": "dreadful-disintegration.jpg",
+      "title": "366 · Dreadful Disintegration",
+      "fullImg": "dreadful-disintegration.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/horrible-hunger.html",
+      "src": "horrible-hunger.jpg",
+      "title": "368 · Horrible Hunger",
+      "fullImg": "horrible-hunger.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/triple-trouble.html",
+      "src": "triple-trouble.jpg",
+      "title": "369 · Triple Trouble",
+      "fullImg": "triple-trouble.png",
+      "power": [
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/agent-of-awesome.html",
+      "src": "agent-of-awesome.jpg",
+      "title": "370 · Agent of Awesome",
+      "fullImg": "agent-of-awesome.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/screaming-shatter.html",
+      "src": "screaming-shatter.jpg",
+      "title": "371 · Screaming Shatter",
+      "fullImg": "screaming-shatter.png",
+      "power": [
+        "/nexo/img/elements/note.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/henchmans-help.html",
+      "src": "henchmans-help.jpg",
+      "title": "373 · Henchman's Help",
+      "fullImg": "henchmans-help.png",
+      "power": [
+        "/nexo/img/elements/monster.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/protective-fortress.html",
+      "src": "protective-fortress.jpg",
+      "title": "374 · Protective Fortress",
+      "fullImg": "protective-fortress.png",
+      "power": []
+    }
+  ],
+  [
+    {
+      "href": "http://www.spyrius.org/nexo/ground-pound.html",
+      "src": "ground-pound.jpg",
+      "title": "401 · Ground Pound",
+      "fullImg": "ground-pound.png",
+      "power": [
+        "/nexo/img/elements/rock.png",
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/nexo-blade.html",
+      "src": "nexo-blade.jpg",
+      "title": "402 · NEXO Blade",
+      "fullImg": "nexo-blade.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/sun.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/target-blaster.html",
+      "src": "target-blaster.jpg",
+      "title": "403 · Target Blaster",
+      "fullImg": "target-blaster.png",
+      "power": [
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/phoenix-blaze.html",
+      "src": "phoenix-blaze.jpg",
+      "title": "404 · Phoenix Blaze",
+      "fullImg": "phoenix-blaze.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/storm-dragon.html",
+      "src": "storm-dragon.jpg",
+      "title": "405 · Storm Dragon",
+      "fullImg": "storm-dragon.png",
+      "power": [
+        "/nexo/img/elements/dragon.png",
+        "/nexo/img/elements/bolt.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/mightiness.html",
+      "src": "mightiness.jpg",
+      "title": "406 · Mightiness",
+      "fullImg": "mightiness.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/flame-wreck.html",
+      "src": "flame-wreck.jpg",
+      "title": "407 · Flame Wreck",
+      "fullImg": "flame-wreck.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/hammer-slam.html",
+      "src": "hammer-slam.jpg",
+      "title": "408 · Hammer Slam",
+      "fullImg": "hammer-slam.png",
+      "power": [
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/giggling-ultra-armor.html",
+      "src": "giggling-ultra-armor.jpg",
+      "title": "409 · Giggling Ultra Armor",
+      "fullImg": "giggling-ultra-armor.png",
+      "power": [
+        "/nexo/img/elements/hawk.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/raging-rally.html",
+      "src": "raging-rally.jpg",
+      "title": "410 · Raging Rally",
+      "fullImg": "raging-rally.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/stone-burst.html",
+      "src": "stone-burst.jpg",
+      "title": "411 · Stone Burst",
+      "fullImg": "stone-burst.png",
+      "power": [
+        "/nexo/img/elements/bomb.png",
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/power-plant.html",
+      "src": "power-plant.jpg",
+      "title": "412 · Power Plant",
+      "fullImg": "power-plant.png",
+      "power": [
+        "/nexo/img/elements/leaf.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/under-woe.html",
+      "src": "under-woe.jpg",
+      "title": "413 · Under Woe",
+      "fullImg": "under-woe.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/downsizer.html",
+      "src": "downsizer.jpg",
+      "title": "414 · Downsizer",
+      "fullImg": "downsizer.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/gauntlet-of-truth.html",
+      "src": "gauntlet-of-truth.jpg",
+      "title": "415 · Gauntlet of Truth",
+      "fullImg": "gauntlet-of-truth.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/ultra-armor-awesome-sauce.html",
+      "src": "ultra-armor-awesome-sauce.jpg",
+      "title": "416 · Ultra Armor Awesome Sauce",
+      "fullImg": "ultra-armor-awesome-sauce.png",
+      "power": [
+        "/nexo/img/elements/bolt.png",
+        "/nexo/img/elements/water.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/end-of-time.html",
+      "src": "end-of-time.jpg",
+      "title": "417 · End of Time",
+      "fullImg": "end-of-time.png",
+      "power": [
+        "/nexo/img/elements/rock.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/clover-of-misfortune.html",
+      "src": "clover-of-misfortune.jpg",
+      "title": "418 · Clover of Misfortune",
+      "fullImg": "clover-of-misfortune.png",
+      "power": [
+        "/nexo/img/elements/leaf.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bad-boils.html",
+      "src": "bad-boils.jpg",
+      "title": "419 · Bad Boils",
+      "fullImg": "bad-boils.png",
+      "power": [
+        "/nexo/img/elements/skull.png",
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/atomic-acorn.html",
+      "src": "atomic-acorn.jpg",
+      "title": "420 · Atomic Acorn",
+      "fullImg": "atomic-acorn.png",
+      "power": [
+        "/nexo/img/elements/fork.png",
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/shark-attack.html",
+      "src": "shark-attack.jpg",
+      "title": "421 · Shark Attack",
+      "fullImg": "shark-attack.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/water.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/fire-tornado.html",
+      "src": "fire-tornado.jpg",
+      "title": "422 · Fire Tornado",
+      "fullImg": "fire-tornado.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/wall-block.html",
+      "src": "wall-block.jpg",
+      "title": "423 · Wall Block",
+      "fullImg": "wall-block.png",
+      "power": [
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/rock-throw.html",
+      "src": "rock-throw.jpg",
+      "title": "424 · Rock Throw",
+      "fullImg": "rock-throw.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/fist-smash.html",
+      "src": "fist-smash.jpg",
+      "title": "425 · Fist Smash",
+      "fullImg": "fist-smash.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/foul-steam.html",
+      "src": "foul-steam.jpg",
+      "title": "426 · Foul Steam",
+      "fullImg": "foul-steam.png",
+      "power": [
+        "/nexo/img/elements/fork.png",
+        "/nexo/img/elements/skull.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/monsoon-storm.html",
+      "src": "monsoon-storm.jpg",
+      "title": "427 · Monsoon Storm",
+      "fullImg": "monsoon-storm.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/water.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/stampede.html",
+      "src": "stampede.jpg",
+      "title": "428 · Stampede",
+      "fullImg": "stampede.png",
+      "power": [
+        "/nexo/img/elements/paw.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/might-of-the-magician.html",
+      "src": "might-of-the-magician.jpg",
+      "title": "429 · Might of the Magician",
+      "fullImg": "might-of-the-magician.png",
+      "power": [
+        "/nexo/img/elements/magic.png",
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/remote-control.html",
+      "src": "remote-control.jpg",
+      "title": "430 · Remote Control",
+      "fullImg": "remote-control.png",
+      "power": [
+        "/nexo/img/elements/bolt.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/superhero-bodyslam.html",
+      "src": "superhero-bodyslam.jpg",
+      "title": "431 · Superhero Bodyslam",
+      "fullImg": "superhero-bodyslam.png",
+      "power": [
+        "/nexo/img/elements/magic.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/potent-peppery-power-axe.html",
+      "src": "potent-peppery-power-axe.jpg",
+      "title": "432 · Potent Peppery Power Axe",
+      "fullImg": "potent-peppery-power-axe.png",
+      "power": [
+        "/nexo/img/elements/fork.png",
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/wasp-missile.html",
+      "src": "wasp-missile.jpg",
+      "title": "433 · Wasp Missile",
+      "fullImg": "wasp-missile.png",
+      "power": [
+        "/nexo/img/elements/bug.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/iron-hair.html",
+      "src": "iron-hair.jpg",
+      "title": "434 · Iron Hair",
+      "fullImg": "iron-hair.png",
+      "power": [
+        "/nexo/img/elements/magic.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/ripping-thorns.html",
+      "src": "ripping-thorns.jpg",
+      "title": "435 · Ripping Thorns",
+      "fullImg": "ripping-thorns.png",
+      "power": [
+        "/nexo/img/elements/leaf.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/rock-n-roll.html",
+      "src": "rock-n-roll.jpg",
+      "title": "436 · Rock 'n' Roll",
+      "fullImg": "rock-n-roll.png",
+      "power": [
+        "/nexo/img/elements/note.png",
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/big-turkey.html",
+      "src": "big-turkey.jpg",
+      "title": "437 · Big Turkey",
+      "fullImg": "big-turkey.png",
+      "power": [
+        "/nexo/img/elements/fork.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bracer-of-strength.html",
+      "src": "bracer-of-strength.jpg",
+      "title": "438 · Bracer of Strength",
+      "fullImg": "bracer-of-strength.png",
+      "power": [
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/bulldozer.html",
+      "src": "bulldozer.jpg",
+      "title": "439 · Bulldozer",
+      "fullImg": "bulldozer.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/chili-con-carne.html",
+      "src": "chili-con-carne.jpg",
+      "title": "441 · Chili Con Carne",
+      "fullImg": "chili-con-carne.png",
+      "power": [
+        "/nexo/img/elements/fork.png",
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/earthquake.html",
+      "src": "earthquake.jpg",
+      "title": "442 · Earthquake",
+      "fullImg": "earthquake.png",
+      "power": [
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/grasshopper.html",
+      "src": "grasshopper.jpg",
+      "title": "443 · Grasshopper",
+      "fullImg": "grasshopper.png",
+      "power": [
+        "/nexo/img/elements/bug.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/hydras-blast.html",
+      "src": "hydras-blast.jpg",
+      "title": "444 · Hydra's Blast",
+      "fullImg": "hydras-blast.png",
+      "power": [
+        "/nexo/img/elements/dragon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/long-gong.html",
+      "src": "long-gong.jpg",
+      "title": "445 · Long Gong",
+      "fullImg": "long-gong.png",
+      "power": [
+        "/nexo/img/elements/note.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/pie-guard.html",
+      "src": "pie-guard.jpg",
+      "title": "447 · Pie Guard",
+      "fullImg": "pie-guard.png",
+      "power": [
+        "/nexo/img/elements/fork.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/rock-twister.html",
+      "src": "rock-twister.jpg",
+      "title": "448 · Rock Twister",
+      "fullImg": "rock-twister.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/shining-axe.html",
+      "src": "shining-axe.jpg",
+      "title": "450 · Shining Axe",
+      "fullImg": "shining-axe.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/spirit-fox.html",
+      "src": "spirit-fox.jpg",
+      "title": "452 · Spirit Fox",
+      "fullImg": "spirit-fox.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/wind.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/standing-ovation.html",
+      "src": "standing-ovation.jpg",
+      "title": "453 · Standing Ovation",
+      "fullImg": "standing-ovation.png",
+      "power": [
+        "/nexo/img/elements/sun.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/sun-flare.html",
+      "src": "sun-flare.jpg",
+      "title": "454 · Sun Flare",
+      "fullImg": "sun-flare.png",
+      "power": [
+        "/nexo/img/elements/sun.png",
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/tic-tac-toe.html",
+      "src": "tic-tac-toe.jpg",
+      "title": "455 · Tic Tac Toe",
+      "fullImg": "tic-tac-toe.png",
+      "power": [
+        "/nexo/img/elements/weapon.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/toad.html",
+      "src": "toad.jpg",
+      "title": "457 · Toad",
+      "fullImg": "toad.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/tooth-buster.html",
+      "src": "tooth-buster.jpg",
+      "title": "458 · Tooth Buster",
+      "fullImg": "tooth-buster.png",
+      "power": [
+        "/nexo/img/elements/bomb.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/touchdown.html",
+      "src": "touchdown.jpg",
+      "title": "459 · Touchdown",
+      "fullImg": "touchdown.png",
+      "power": [
+        "/nexo/img/elements/armor.png",
+        "/nexo/img/elements/sun.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/triple-habanero.html",
+      "src": "triple-habanero.jpg",
+      "title": "460 · Triple Habanero",
+      "fullImg": "triple-habanero.png",
+      "power": [
+        "/nexo/img/elements/fork.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/vertigo.html",
+      "src": "vertigo.jpg",
+      "title": "461 · Vertigo",
+      "fullImg": "vertigo.png",
+      "power": [
+        "/nexo/img/elements/wind.png",
+        "/nexo/img/elements/armor.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/blazing-burn.html",
+      "src": "blazing-burn.jpg",
+      "title": "463 · Blazing Burn",
+      "fullImg": "blazing-burn.png",
+      "power": [
+        "/nexo/img/elements/fire.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/malicious-melting.html",
+      "src": "malicious-melting.jpg",
+      "title": "464 · Malicious Melting",
+      "fullImg": "malicious-melting.png",
+      "power": [
+        "/nexo/img/elements/water.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/volcanic-vengeance.html",
+      "src": "volcanic-vengeance.jpg",
+      "title": "465 · Volcanic Vengeance",
+      "fullImg": "volcanic-vengeance.png",
+      "power": [
+        "/nexo/img/elements/rock.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/kings-rose.html",
+      "src": "kings-rose.jpg",
+      "title": "468 · King's Rose",
+      "fullImg": "kings-rose.png",
+      "power": [
+        "/nexo/img/elements/leaf.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/reindeer.html",
+      "src": "reindeer.jpg",
+      "title": "469 · Reindeer",
+      "fullImg": "reindeer.png",
+      "power": [
+        "/nexo/img/elements/paw.png",
+        "/nexo/img/elements/snow.png"
+      ]
+    },
+    {
+      "href": "http://www.spyrius.org/nexo/fighting-frenzy.html",
+      "src": "fighting-frenzy.jpg",
+      "title": "470 · Fighting Frenzy",
+      "fullImg": "fighting-frenzy.png",
+      "power": [
+        "/nexo/img/elements/weapon.png",
+        "/nexo/img/elements/magic.png"
+      ]
+    }
+  ]
+]
