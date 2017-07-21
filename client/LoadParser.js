@@ -28,6 +28,18 @@ class LoadParser {
             }
         });
     }
+    decode(src) {
+        return unescape(src.replace(/&#x/g, '%u').replace(/;/g, '').replace(/&quot/g, '"').replace(/%uB7/g, '·'));
+    }
+    delay(sec) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return new Promise(function (resolve, reject) {
+                setTimeout(() => {
+                    resolve();
+                }, sec);
+            });
+        });
+    }
     load(url) {
         return __awaiter(this, void 0, void 0, function* () {
             let result = yield node_fetch_1.default(url);
