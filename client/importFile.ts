@@ -1,11 +1,11 @@
 import * as fs from "fs";
-const fetch = require("node-fetch");
+import fetch from "node-fetch";
 import formData = require("form-data");
 
-const MusicMeta = require("musicmetadata");
+import MusicMeta = require("musicmetadata");
 
 // const ROOT = "F:/KwDownload/song/";
-const ROOT = "G:/讲故事";
+const ROOT = "F:/讲故事";
 const HOST = "http://jinjing.duapp.com";
 const isUPload = false;
 // const HOST = "http://127.0.0.1:18080";
@@ -84,5 +84,5 @@ async function readFileMeta(filePath:string):Promise<MM.Metadata> {
     });
 }
 
-go(ROOT + "/飞飞姐姐说故事-童话故事集") ;
+go(ROOT + "/1悦咿呀有声绘本故事") ;
 // go(ROOT);
