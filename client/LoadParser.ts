@@ -26,7 +26,11 @@ abstract class LoadParser {
     }
 
     decode(src: string) : string {
-        return unescape(src.replace(/&#x/g,'%u').replace(/;/g,'').replace(/&quot/g,'"').replace(/%uB7/g,'·'));
+        if (src) {
+            return unescape(src.replace(/&#x/g,'%u').replace(/;/g,'').replace(/&quot/g,'"').replace(/%uB7/g,'·'));
+        } else {
+            return '';
+        }
     }
 
     async delay(sec:number):Promise<any> {

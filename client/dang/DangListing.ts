@@ -7,7 +7,7 @@ const HOST = "http://jinjing.duapp.com";
 
 import {LocalMongodbService} from "../LocalMongodbService";
 
-class DangListing extends LoadParser {
+export default class DangListing extends LoadParser {
 
     mongodb: LocalMongodbService;
 
@@ -109,8 +109,8 @@ async function call(){
 console.log(JSON.stringify(result));*/
 
 await nkl.delay(3000);
-    for(var i=1;i<=100; i++) {
-        let books = await nkl.loadData('http://category.dangdang.com/pg' + (i+1) + '-cp01.41.43.00.00.00-srsort_sale_amt_desc.html');
+    for(var i=1;i<=42; i++) {
+        let books = await nkl.loadData('http://search.dangdang.com/?key=%BF%AD%B5%CF%BF%CB&act=input&page_index=' + i);
         let batchResults = await nkl.postBooks(books);
 
         console.log('batch uploaded');
@@ -118,5 +118,5 @@ await nkl.delay(3000);
     }
 }
 
-call();
+//call();
 

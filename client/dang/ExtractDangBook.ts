@@ -61,18 +61,16 @@ export default class ExtractDangBook extends LoadParser {
         let $c = cheerio.load(commenthtml.data.html);
 
         book.comments = [];
-        $c('.comment_items').each(function() {
+        $c('.comment_items').each(function(i, elem) {
             let comment: any = {};
-            comment.detail = $(this).find('.describe_detail').text();
-            comment.time = $(this).find('.starline').text();
+            comment.detail = $(elem).find('.describe_detail').text();
+            comment.time = $(elem).find('.starline').text();
             book.comments.push(comment);
         });
 
         return book;
     }
 }
-
-
 
 async function call(){
     let nkl = new ExtractDangBook();
@@ -82,4 +80,4 @@ async function call(){
 
 }
 
-call();
+//call();

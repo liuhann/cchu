@@ -58,10 +58,10 @@ class ExtractDangBook extends LoadParser_1.default {
             let commenthtml = yield comment.json();
             let $c = cheerio.load(commenthtml.data.html);
             book.comments = [];
-            $c('.comment_items').each(function () {
+            $c('.comment_items').each(function (i, elem) {
                 let comment = {};
-                comment.detail = $(this).find('.describe_detail').text();
-                comment.time = $(this).find('.starline').text();
+                comment.detail = $(elem).find('.describe_detail').text();
+                comment.time = $(elem).find('.starline').text();
                 book.comments.push(comment);
             });
             return book;
@@ -76,4 +76,4 @@ function call() {
         console.log(book, 'book');
     });
 }
-call();
+//call();

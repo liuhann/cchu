@@ -95,6 +95,7 @@ class DangListing extends LoadParser_1.default {
         });
     }
 }
+exports.default = DangListing;
 function call() {
     return __awaiter(this, void 0, void 0, function* () {
         let nkl = new DangListing();
@@ -109,12 +110,12 @@ function call() {
         });
         console.log(JSON.stringify(result));*/
         yield nkl.delay(3000);
-        for (var i = 1; i <= 100; i++) {
-            let books = yield nkl.loadData('http://category.dangdang.com/pg' + (i + 1) + '-cp01.41.43.00.00.00-srsort_sale_amt_desc.html');
+        for (var i = 1; i <= 42; i++) {
+            let books = yield nkl.loadData('http://search.dangdang.com/?key=%BF%AD%B5%CF%BF%CB&act=input&page_index=' + i);
             let batchResults = yield nkl.postBooks(books);
             console.log('batch uploaded');
             yield nkl.delay(2000 + Math.random() * 1000);
         }
     });
 }
-call();
+//call();

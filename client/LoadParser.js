@@ -29,7 +29,12 @@ class LoadParser {
         });
     }
     decode(src) {
-        return unescape(src.replace(/&#x/g, '%u').replace(/;/g, '').replace(/&quot/g, '"').replace(/%uB7/g, '·'));
+        if (src) {
+            return unescape(src.replace(/&#x/g, '%u').replace(/;/g, '').replace(/&quot/g, '"').replace(/%uB7/g, '·'));
+        }
+        else {
+            return '';
+        }
     }
     delay(sec) {
         return __awaiter(this, void 0, void 0, function* () {
