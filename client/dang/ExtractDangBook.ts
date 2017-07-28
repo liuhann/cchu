@@ -75,9 +75,8 @@ export default class ExtractDangBook extends LoadParser {
 async function call(){
     let nkl = new ExtractDangBook();
 
-    let book = await nkl.loadData('http://product.dangdang.com/9239112.html');
+    let book = await nkl.loadData('http://product.dangdang.com/23708651.html');
     console.log(book,  'book');
 
 }
-
-//call();
+call();

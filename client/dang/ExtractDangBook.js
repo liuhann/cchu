@@ -72,8 +72,8 @@ exports.default = ExtractDangBook;
 function call() {
     return __awaiter(this, void 0, void 0, function* () {
         let nkl = new ExtractDangBook();
-        let book = yield nkl.loadData('http://product.dangdang.com/9239112.html');
+        let book = yield nkl.loadData('http://product.dangdang.com/23708651.html');
         console.log(book, 'book');
     });
 }
-//call();
+call();
