@@ -9,11 +9,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = require("fs");
-const fetch = require("node-fetch");
+const node_fetch_1 = require("node-fetch");
 const formData = require("form-data");
 const MusicMeta = require("musicmetadata");
 // const ROOT = "F:/KwDownload/song/";
-const ROOT = "G:/讲故事";
+const ROOT = "F:/讲故事";
 const HOST = "http://jinjing.duapp.com";
 const isUPload = false;
 // const HOST = "http://127.0.0.1:18080";
@@ -33,7 +33,7 @@ function go(dir) {
                         form.append('path', fileFullPath.substr(ROOT.length));
                         let resultJSON;
                         if (isUPload) {
-                            let uploadResult = yield fetch(HOST + "/story/upload", {
+                            let uploadResult = yield node_fetch_1.default(HOST + "/story/upload", {
                                 method: "POST",
                                 body: form
                             });
@@ -41,7 +41,7 @@ function go(dir) {
                             console.log(resultJSON);
                         }
                         // await fetch(HOST+ "/story/create");
-                        let result = yield fetch(HOST + "/story/create", {
+                        let result = yield node_fetch_1.default(HOST + "/story/create", {
                             method: "POST",
                             headers: {
                                 'Accept': 'application/json',
@@ -91,5 +91,5 @@ function readFileMeta(filePath) {
         });
     });
 }
-go(ROOT + "/飞飞姐姐说故事-童话故事集");
+go(ROOT + "/1悦咿呀有声绘本故事");
 // go(ROOT);
