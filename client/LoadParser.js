@@ -9,7 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const node_fetch_1 = require("node-fetch");
+const fs = require("fs");
 const cheerio = require("cheerio");
+const HOST = "http://jinjing.duapp.com";
 class LoadParser {
     constructor() {
     }
@@ -35,6 +37,47 @@ class LoadParser {
         else {
             return '';
         }
+    }
+    postCover(localFile) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return null;
+        });
+    }
+    postStory(book) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let result = yield node_fetch_1.default(HOST + "/story/create", {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    v: '1.1',
+                    title: book.title,
+                    st: book.subtitle,
+                    author: book.author,
+                    short: book.detail,
+                    link: book.link,
+                    thumb: book.thumb
+                })
+            });
+        });
+    }
+    downloadFile(remoteUrl, localFolder, fileName) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let pr = new Promise(function (resolve, reject) {
+                console.log(`downloading ${remoteUrl}`);
+                node_fetch_1.default(remoteUrl).then(function (res) {
+                    let dest = fs.createWriteStream(localFolder + '/' + fileName);
+                    res.body.on('end', () => {
+                        console.log('downloaded');
+                        resolve();
+                    });
+                    res.body.pipe(dest);
+                });
+            });
+            return pr;
+        });
     }
     delay(sec) {
         return __awaiter(this, void 0, void 0, function* () {

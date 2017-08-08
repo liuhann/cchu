@@ -33,7 +33,7 @@ exports.default = DangSearch;
 function go() {
     return __awaiter(this, void 0, void 0, function* () {
         let ds = new DangSearch();
-        let book = yield ds.search('小壁虎借尾巴');
+        let book = yield ds.search('什么都知道的小麻雀');
         console.log(book);
     });
 }

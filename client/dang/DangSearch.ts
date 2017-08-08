@@ -22,7 +22,7 @@ export default class DangSearch extends DangListing {
 
 async function go() {
     let ds = new DangSearch();
-    let book = await ds.search('小壁虎借尾巴');
+    let book = await ds.search('什么都知道的小麻雀');
     console.log(book);
 }
 

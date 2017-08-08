@@ -1,8 +1,11 @@
 import fetch from "node-fetch";
+import *　as fs from 'fs';
 
 import * as cheerio from 'cheerio';
 
 declare function unescape(encodedURIComponent: string): string;
+
+const HOST = "http://jinjing.duapp.com";
 
 abstract class LoadParser {
 
@@ -31,6 +34,47 @@ abstract class LoadParser {
         } else {
             return '';
         }
+    }
+
+    async postCover(localFile:string):Promise<string> {
+        return null;
+    }
+
+
+    async postStory(book:any) {
+        let result = await fetch(HOST + "/story/create", {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                v: '1.1',
+                title: book.title,
+                st: book.subtitle,
+                author: book.author,
+                short:book.detail,
+                link: book.link,
+                thumb: book.thumb
+            })
+        });
+
+
+    }
+
+    async downloadFile(remoteUrl: string, localFolder: string, fileName?:string): Promise<any> {
+        let pr = new Promise(function(resolve, reject) {
+            console.log(`downloading ${remoteUrl}`);
+            fetch(remoteUrl).then(function(res:any) {
+                let dest = fs.createWriteStream(localFolder + '/' + fileName);
+                res.body.on('end', ()=> {
+                    console.log('downloaded');
+                    resolve();
+                });
+                res.body.pipe(dest);
+            });
+        });
+        return pr;
     }
 
     async delay(sec:number):Promise<any> {
