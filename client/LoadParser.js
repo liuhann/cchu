@@ -11,6 +11,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const node_fetch_1 = require("node-fetch");
 const fs = require("fs");
 const cheerio = require("cheerio");
+const FormData = require("form-data");
 const HOST = "http://jinjing.duapp.com";
 class LoadParser {
     constructor() {
@@ -40,12 +41,20 @@ class LoadParser {
     }
     postCover(localFile) {
         return __awaiter(this, void 0, void 0, function* () {
-            return null;
+            let formData = new FormData();
+            formData.append('file', fs.createReadStream(localFile));
+            let fetching = yield node_fetch_1.default(HOST + "/file/upload", {
+                method: "POST",
+                body: formData
+            });
+            let result = yield fetching.json();
+            return result.id;
         });
     }
+    // create story
     postStory(book) {
         return __awaiter(this, void 0, void 0, function* () {
-            let result = yield node_fetch_1.default(HOST + "/story/create", {
+            let fetching = yield node_fetch_1.default(HOST + "/story/create", {
                 method: "POST",
                 headers: {
                     'Accept': 'application/json',
@@ -53,6 +62,7 @@ class LoadParser {
                 },
                 body: JSON.stringify({
                     v: '1.1',
+                    cover: book.cover,
                     title: book.title,
                     st: book.subtitle,
                     author: book.author,
@@ -61,6 +71,7 @@ class LoadParser {
                     thumb: book.thumb
                 })
             });
+            return yield fetching.json();
         });
     }
     downloadFile(remoteUrl, localFolder, fileName) {

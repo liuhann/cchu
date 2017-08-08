@@ -2,6 +2,7 @@ import fetch from "node-fetch";
 import *　as fs from 'fs';
 
 import * as cheerio from 'cheerio';
+import * as FormData from 'form-data';
 
 declare function unescape(encodedURIComponent: string): string;
 
@@ -37,12 +38,19 @@ abstract class LoadParser {
     }
 
     async postCover(localFile:string):Promise<string> {
-        return null;
+        let formData = new FormData();
+        formData.append('file', fs.createReadStream(localFile));
+        let fetching = await fetch(HOST + "/file/upload", {
+            method: "POST",
+            body: formData
+        });
+        let result = await fetching.json();
+        return result.id;
     }
 
-
+    // create story
     async postStory(book:any) {
-        let result = await fetch(HOST + "/story/create", {
+        let fetching = await fetch(HOST + "/story/create", {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
@@ -50,6 +58,7 @@ abstract class LoadParser {
             },
             body: JSON.stringify({
                 v: '1.1',
+                cover: book.cover,
                 title: book.title,
                 st: book.subtitle,
                 author: book.author,
@@ -58,8 +67,7 @@ abstract class LoadParser {
                 thumb: book.thumb
             })
         });
-
-
+        return await fetching.json();
     }
 
     async downloadFile(remoteUrl: string, localFolder: string, fileName?:string): Promise<any> {
