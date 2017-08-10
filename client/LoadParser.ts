@@ -3,6 +3,7 @@ import *　as fs from 'fs';
 
 import * as cheerio from 'cheerio';
 import * as FormData from 'form-data';
+import formData = require("form-data");
 
 declare function unescape(encodedURIComponent: string): string;
 
@@ -49,25 +50,36 @@ abstract class LoadParser {
     }
 
     // create story
-    async postStory(book:any) {
-        let fetching = await fetch(HOST + "/story/create", {
+    async postStory(book:any, coverPath: string) {
+        let resultJSON : any = {};
+
+        console.log('uploading cover');
+        if (coverPath) {
+            let form = new formData();
+            form.append('file', fs.createReadStream(coverPath));
+            let uploadResult = await fetch(HOST + "/file/upload", {
+                method: "POST",
+                body: form
+            });
+            resultJSON = await uploadResult.json();
+            console.log(resultJSON);
+        }
+        // await fetch(HOST+ "/story/create");
+        let result = await fetch(HOST + "/story/create", {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                v: '1.1',
-                cover: book.cover,
                 title: book.title,
-                st: book.subtitle,
-                author: book.author,
-                short:book.detail,
-                link: book.link,
-                thumb: book.thumb
+                album: book.album,
+                short: book.short,
+                path: book.album + '/' + book.title + '.mp3',
+                duration: book.duration,
+                cover: resultJSON.id || null
             })
         });
-        return await fetching.json();
     }
 
     async downloadFile(remoteUrl: string, localFolder: string, fileName?:string): Promise<any> {

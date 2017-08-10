@@ -12,6 +12,7 @@ const node_fetch_1 = require("node-fetch");
 const fs = require("fs");
 const cheerio = require("cheerio");
 const FormData = require("form-data");
+const formData = require("form-data");
 const HOST = "http://jinjing.duapp.com";
 class LoadParser {
     constructor() {
@@ -52,26 +53,36 @@ class LoadParser {
         });
     }
     // create story
-    postStory(book) {
+    postStory(book, coverPath) {
         return __awaiter(this, void 0, void 0, function* () {
-            let fetching = yield node_fetch_1.default(HOST + "/story/create", {
+            let resultJSON = {};
+            console.log('uploading cover');
+            if (coverPath) {
+                let form = new formData();
+                form.append('file', fs.createReadStream(coverPath));
+                let uploadResult = yield node_fetch_1.default(HOST + "/file/upload", {
+                    method: "POST",
+                    body: form
+                });
+                resultJSON = yield uploadResult.json();
+                console.log(resultJSON);
+            }
+            // await fetch(HOST+ "/story/create");
+            let result = yield node_fetch_1.default(HOST + "/story/create", {
                 method: "POST",
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    v: '1.1',
-                    cover: book.cover,
                     title: book.title,
-                    st: book.subtitle,
-                    author: book.author,
-                    short: book.detail,
-                    link: book.link,
-                    thumb: book.thumb
+                    album: book.album,
+                    short: book.short,
+                    path: book.album + '/' + book.title + '.mp3',
+                    duration: book.duration,
+                    cover: resultJSON.id || null
                 })
             });
-            return yield fetching.json();
         });
     }
     downloadFile(remoteUrl, localFolder, fileName) {

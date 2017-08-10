@@ -8,16 +8,24 @@ const LIZHI_HOST = "https://www.lizhi.fm";
 export default class LizhiListing extends LoadParser {
 
     private basePath:string;
-    constructor(basePath: string) {
+    constructor() {
         super();
-        this.basePath = basePath;
     }
 
     async loadData(url:string): Promise<any> {
         let $ = await this.load(url);
         let stories = [];
         for(let li of Array.from($('.js-audio-list').find('li'))) {
-            let story = await this.extractStory($(li));
+            let story: any = {};
+            let a = $(li).find('a.audio-list-item');
+            story.title = a.attr('title');
+            story.album = a.attr('data-radio-name');
+            story.href = a.attr('href')
+            story.author = a.attr('data-user-name');
+            //story.cover = a.attr('data-cover');
+            story.duration = a.attr('data-duration');
+            story.mp3 = a.attr('data-url');
+            //let story = await this.extractStory($(li));
             stories.push(story);
         }
         return stories;
@@ -32,18 +40,38 @@ export default class LizhiListing extends LoadParser {
 
         let $ = await this.load(LIZHI_HOST + a.attr('href'));
         book.cover = $('.audioCover img').attr('src');
-        book.mp3 = $('.js-play-data').attr('data-url');
+
+        book.duration = $('.js-play-data').attr('data-duration');
         book.short = $('.desText').html();
         return book;
     }
 }
 
 async function call(){
-    let nkl = new LizhiListing('d:/');
+    let nkl = new LizhiListing();
     await nkl.delay(1000);
-
+    let posted = false;
     let list = await nkl.loadData('http://www.lizhi.fm/982236/p/1.html');
     console.log(list);
+
+    let album = '';
+
+    for(let story of list) {
+        if (!fs.existsSync('./' + story.album)) {
+            fs.mkdirSync('./' + story.album);
+        }
+        if (posted) break;
+        posted = true;
+
+        //mp3 download
+        await nkl.downloadFile(story.mp3, './' + story.album, story.title + '.mp3');
+
+        let $ = await nkl.load(`${LIZHI_HOST}${story.href}`);
+        story.cover = $('.audioCover img').attr('src');
+        story.short = nkl.decode($('.desText').html());
+        await nkl.downloadFile(story.cover, './' + story.album, story.title + '.png');
+        await nkl.postStory(story,  `./${story.album}/${story.title}.png`);
+    }
 
 }
 
