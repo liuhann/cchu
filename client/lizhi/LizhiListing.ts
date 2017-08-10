@@ -47,6 +47,10 @@ export default class LizhiListing extends LoadParser {
     }
 }
 
+const Album_Map = new Map();
+
+
+
 async function call(){
     let nkl = new LizhiListing();
     await nkl.delay(1000);

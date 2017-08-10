@@ -52,6 +52,7 @@ class LizhiListing extends LoadParser_1.default {
     }
 }
 exports.default = LizhiListing;
+const Album_Map = new Map();
 function call() {
     return __awaiter(this, void 0, void 0, function* () {
         let nkl = new LizhiListing();
