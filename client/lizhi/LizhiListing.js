@@ -52,28 +52,31 @@ class LizhiListing extends LoadParser_1.default {
     }
 }
 exports.default = LizhiListing;
+let AlbumPath = '小柚子故事屋';
 function call() {
     return __awaiter(this, void 0, void 0, function* () {
         let nkl = new LizhiListing();
         yield nkl.delay(1000);
         let posted = false;
         let list = yield nkl.loadData('http://www.lizhi.fm/982236/p/1.html');
-        console.log(list);
-        let album = '';
-        for (let story of list) {
-            if (!fs.existsSync('./' + story.album)) {
-                fs.mkdirSync('./' + story.album);
+        let pagei = 0;
+        while (list.length) {
+            console.log(list);
+            for (let story of list) {
+                story.album = AlbumPath;
+                if (!fs.existsSync('./' + story.album)) {
+                    fs.mkdirSync('./' + story.album);
+                }
+                //mp3 download
+                yield nkl.downloadFile(story.mp3, './' + story.album, story.title + '.mp3');
+                let $ = yield nkl.load(`${LIZHI_HOST}${story.href}`);
+                story.cover = $('.audioCover img').attr('src');
+                story.short = nkl.decode($('.desText').html());
+                yield nkl.downloadFile(story.cover, './' + story.album, story.title + '.png');
+                yield nkl.postStory(story, `./${story.album}/${story.title}.png`);
             }
-            if (posted)
-                break;
-            posted = true;
-            //mp3 download
-            yield nkl.downloadFile(story.mp3, './' + story.album, story.title + '.mp3');
-            let $ = yield nkl.load(`${LIZHI_HOST}${story.href}`);
-            story.cover = $('.audioCover img').attr('src');
-            story.short = nkl.decode($('.desText').html());
-            yield nkl.downloadFile(story.cover, './' + story.album, story.title + '.png');
-            yield nkl.postStory(story, `./${story.album}/${story.title}.png`);
+            pagei++;
+            list = yield nkl.loadData(`http://www.lizhi.fm/982236/p/${pagei}.html`);
         }
     });
 }
