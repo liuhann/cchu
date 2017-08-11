@@ -47,6 +47,10 @@ export default class LizhiListing extends LoadParser {
     }
 }
 
+
+let AlbumPath = '小柚子故事屋'
+
+
 const Album_Map = new Map();
 
 
@@ -55,27 +59,32 @@ async function call(){
     let nkl = new LizhiListing();
     await nkl.delay(1000);
     let posted = false;
+
+
     let list = await nkl.loadData('http://www.lizhi.fm/982236/p/1.html');
-    console.log(list);
+    let pagei = 0;
 
-    let album = '';
+    while(list.length) {
+        console.log(list);
+        for(let story of list) {
+            story.album = AlbumPath;
+            if (!fs.existsSync('./' + story.album)) {
+                fs.mkdirSync('./' + story.album);
+            }
+            //mp3 download
+            await nkl.downloadFile(story.mp3, './' + story.album, story.title + '.mp3');
 
-    for(let story of list) {
-        if (!fs.existsSync('./' + story.album)) {
-            fs.mkdirSync('./' + story.album);
+            let $ = await nkl.load(`${LIZHI_HOST}${story.href}`);
+            story.cover = $('.audioCover img').attr('src');
+            story.short = nkl.decode($('.desText').html());
+            await nkl.downloadFile(story.cover, './' + story.album, story.title + '.png');
+            await nkl.postStory(story,  `./${story.album}/${story.title}.png`);
         }
-        if (posted) break;
-        posted = true;
+        pagei ++;
 
-        //mp3 download
-        await nkl.downloadFile(story.mp3, './' + story.album, story.title + '.mp3');
-
-        let $ = await nkl.load(`${LIZHI_HOST}${story.href}`);
-        story.cover = $('.audioCover img').attr('src');
-        story.short = nkl.decode($('.desText').html());
-        await nkl.downloadFile(story.cover, './' + story.album, story.title + '.png');
-        await nkl.postStory(story,  `./${story.album}/${story.title}.png`);
+        list = await nkl.loadData(`http://www.lizhi.fm/982236/p/${pagei}.html`);
     }
+
 
 }
 
