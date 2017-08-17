@@ -56,33 +56,40 @@ class LoadParser {
     postStory(book, coverPath) {
         return __awaiter(this, void 0, void 0, function* () {
             let resultJSON = {};
-            console.log('uploading cover');
-            if (coverPath) {
-                let form = new formData();
-                form.append('file', fs.createReadStream(coverPath));
-                let uploadResult = yield node_fetch_1.default(HOST + "/file/upload", {
-                    method: "POST",
-                    body: form
-                });
-                resultJSON = yield uploadResult.json();
-                console.log(resultJSON);
+            if (coverPath && fs.existsSync(coverPath)) {
+                try {
+                    let form = new formData();
+                    form.append('file', fs.createReadStream(coverPath));
+                    let uploadResult = yield node_fetch_1.default(HOST + "/file/upload", {
+                        method: "POST",
+                        body: form
+                    });
+                    resultJSON = yield uploadResult.json();
+                }
+                catch (e) {
+                }
             }
             // await fetch(HOST+ "/story/create");
-            let result = yield node_fetch_1.default(HOST + "/story/create", {
-                method: "POST",
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    title: book.title,
-                    album: book.album,
-                    short: book.short,
-                    path: book.album + '/' + book.title + '.mp3',
-                    duration: book.duration,
-                    cover: resultJSON.id || null
-                })
-            });
+            try {
+                let result = yield node_fetch_1.default(HOST + "/story/create", {
+                    method: "POST",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        title: book.title,
+                        album: book.album,
+                        short: book.short,
+                        path: book.album + '/' + book.title + '.mp3',
+                        duration: book.duration,
+                        cover: resultJSON.id || null
+                    })
+                });
+                yield result.json();
+            }
+            catch (e) {
+            }
         });
     }
     downloadFile(remoteUrl, localFolder, fileName) {

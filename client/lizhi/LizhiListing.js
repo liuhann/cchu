@@ -12,6 +12,22 @@ const LoadParser_1 = require("../LoadParser");
 const fs = require("fs");
 const fetch = require("node-fetch");
 const LIZHI_HOST = "https://www.lizhi.fm";
+const FILE_ROOT = 'E:/lizhi';
+const album_list = {
+    '982236': {
+        album: '小柚子故事屋',
+        dup_break: false // 相同的是否break
+    },
+    '25681': {
+        album: '凯叔讲故事',
+        start: 18,
+        dup_break: false // 相同的是否break
+    },
+    '1682240': {
+        album: '彩色斑马讲科学',
+        dup_break: false // 相同的是否break
+    },
+};
 class LizhiListing extends LoadParser_1.default {
     constructor() {
         super();
@@ -44,7 +60,7 @@ class LizhiListing extends LoadParser_1.default {
             book.album = a.attr('data-radio-name');
             book.author = a.attr('data-user-name');
             let $ = yield this.load(LIZHI_HOST + a.attr('href'));
-            book.cover = $('.audioCover img').attr('src');
+            book.cover = $('.js-play-data').attr('data-cover');
             book.duration = $('.js-play-data').attr('data-duration');
             book.short = $('.desText').html();
             return book;
@@ -52,33 +68,44 @@ class LizhiListing extends LoadParser_1.default {
     }
 }
 exports.default = LizhiListing;
-let AlbumPath = '小柚子故事屋';
-const Album_Map = new Map();
-function call() {
+function run() {
     return __awaiter(this, void 0, void 0, function* () {
         let nkl = new LizhiListing();
-        yield nkl.delay(1000);
-        let posted = false;
-        let list = yield nkl.loadData('http://www.lizhi.fm/982236/p/1.html');
-        let pagei = 0;
-        while (list.length) {
-            console.log(list);
-            for (let story of list) {
-                story.album = AlbumPath;
-                if (!fs.existsSync('./' + story.album)) {
-                    fs.mkdirSync('./' + story.album);
-                }
-                //mp3 download
-                yield nkl.downloadFile(story.mp3, './' + story.album, story.title + '.mp3');
-                let $ = yield nkl.load(`${LIZHI_HOST}${story.href}`);
-                story.cover = $('.audioCover img').attr('src');
-                story.short = nkl.decode($('.desText').html());
-                yield nkl.downloadFile(story.cover, './' + story.album, story.title + '.png');
-                yield nkl.postStory(story, `./${story.album}/${story.title}.png`);
+        for (let albumId in album_list) {
+            const albumInfo = album_list[albumId];
+            if (!fs.existsSync(FILE_ROOT + '/' + albumInfo.album)) {
+                fs.mkdirSync(FILE_ROOT + '/' + albumInfo.album);
             }
-            pagei++;
-            list = yield nkl.loadData(`http://www.lizhi.fm/982236/p/${pagei}.html`);
+            let itor = 1;
+            let list = yield nkl.loadData(`${LIZHI_HOST}/${albumId}/p/${itor}.html`);
+            while (list.length) {
+                let dup_breaked = false;
+                for (let story of list) {
+                    story.album = albumInfo.album;
+                    if (fs.existsSync(`${FILE_ROOT}/${story.album}/${story.title}.mp3`)) {
+                        if (albumInfo.dup_break) {
+                            dup_breaked = true;
+                            break;
+                        }
+                        else {
+                            continue;
+                        }
+                    }
+                    yield nkl.delay(5000 + Math.random() * 1000);
+                    //mp3 download
+                    yield nkl.downloadFile(story.mp3, FILE_ROOT + '/' + albumInfo.album, story.title + '.mp3');
+                    let $ = yield nkl.load(`${LIZHI_HOST}${story.href}`);
+                    story.cover = $('.audioCover img').attr('src');
+                    story.short = nkl.decode($('.desText').html());
+                    yield nkl.downloadFile(story.cover, FILE_ROOT + '/' + albumInfo.album, story.title + '.png');
+                    yield nkl.postStory(story, `${FILE_ROOT}/${story.album}/${story.title}.png`);
+                }
+                itor++;
+                list = yield nkl.loadData(`${LIZHI_HOST}/${albumId}/p/${itor}.html`);
+                if (dup_breaked)
+                    break;
+            }
         }
     });
 }
-call();
+run();

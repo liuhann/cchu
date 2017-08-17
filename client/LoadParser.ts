@@ -52,34 +52,42 @@ abstract class LoadParser {
     // create story
     async postStory(book:any, coverPath: string) {
         let resultJSON : any = {};
+        if (coverPath && fs.existsSync(coverPath)) {
+            try {
+                let form = new formData();
+                form.append('file', fs.createReadStream(coverPath));
+                let uploadResult = await fetch(HOST + "/file/upload", {
+                    method: "POST",
+                    body: form
+                });
+                resultJSON = await uploadResult.json();
+            } catch (e) {
 
-        console.log('uploading cover');
-        if (coverPath) {
-            let form = new formData();
-            form.append('file', fs.createReadStream(coverPath));
-            let uploadResult = await fetch(HOST + "/file/upload", {
-                method: "POST",
-                body: form
-            });
-            resultJSON = await uploadResult.json();
-            console.log(resultJSON);
+            }
         }
         // await fetch(HOST+ "/story/create");
-        let result = await fetch(HOST + "/story/create", {
-            method: "POST",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                title: book.title,
-                album: book.album,
-                short: book.short,
-                path: book.album + '/' + book.title + '.mp3',
-                duration: book.duration,
-                cover: resultJSON.id || null
-            })
-        });
+
+        try {
+            let result = await fetch(HOST + "/story/create", {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    title: book.title,
+                    album: book.album,
+                    short: book.short,
+                    path: book.album + '/' + book.title + '.mp3',
+                    duration: book.duration,
+                    cover: resultJSON.id || null
+                })
+            });
+            await result.json();
+        } catch (e) {
+
+        }
+
     }
 
     async downloadFile(remoteUrl: string, localFolder: string, fileName?:string): Promise<any> {
