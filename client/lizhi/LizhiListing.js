@@ -20,7 +20,7 @@ const album_list = {
     },
     '25681': {
         album: '凯叔讲故事',
-        start: 18,
+        start: 33,
         dup_break: false // 相同的是否break
     },
     '1682240': {
@@ -76,7 +76,7 @@ function run() {
             if (!fs.existsSync(FILE_ROOT + '/' + albumInfo.album)) {
                 fs.mkdirSync(FILE_ROOT + '/' + albumInfo.album);
             }
-            let itor = 1;
+            let itor = albumInfo.start || 1;
             let list = yield nkl.loadData(`${LIZHI_HOST}/${albumId}/p/${itor}.html`);
             while (list.length) {
                 let dup_breaked = false;
@@ -93,11 +93,16 @@ function run() {
                     }
                     yield nkl.delay(5000 + Math.random() * 1000);
                     //mp3 download
-                    yield nkl.downloadFile(story.mp3, FILE_ROOT + '/' + albumInfo.album, story.title + '.mp3');
+                    let musicFile = yield nkl.downloadFile(story.mp3, FILE_ROOT + '/' + albumInfo.album, story.title + '.mp3');
+                    if (!musicFile)
+                        continue;
                     let $ = yield nkl.load(`${LIZHI_HOST}${story.href}`);
-                    story.cover = $('.audioCover img').attr('src');
+                    story.cover = $('.js-play-data').attr('data-cover');
+                    story.duration = $('.js-play-data').attr('data-duration');
                     story.short = nkl.decode($('.desText').html());
-                    yield nkl.downloadFile(story.cover, FILE_ROOT + '/' + albumInfo.album, story.title + '.png');
+                    let imageFile = yield nkl.downloadFile(story.cover, FILE_ROOT + '/' + albumInfo.album, story.title + '.png');
+                    if (!imageFile)
+                        continue;
                     yield nkl.postStory(story, `${FILE_ROOT}/${story.album}/${story.title}.png`);
                 }
                 itor++;

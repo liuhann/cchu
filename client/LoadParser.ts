@@ -91,13 +91,13 @@ abstract class LoadParser {
     }
 
     async downloadFile(remoteUrl: string, localFolder: string, fileName?:string): Promise<any> {
+        if (!remoteUrl) return null;
         let pr = new Promise(function(resolve, reject) {
             console.log(`downloading ${remoteUrl}`);
             fetch(remoteUrl).then(function(res:any) {
                 let dest = fs.createWriteStream(localFolder + '/' + fileName);
                 res.body.on('end', ()=> {
-                    console.log('downloaded');
-                    resolve();
+                    resolve('downloaded');
                 });
                 res.body.pipe(dest);
             });
