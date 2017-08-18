@@ -20,7 +20,7 @@ const album_list = {
     },
     '25681': {
         album: '凯叔讲故事',
-        start: 33,
+        start: 65,
         dup_break: false // 相同的是否break
     },
     '1682240': {
