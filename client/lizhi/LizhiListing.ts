@@ -20,8 +20,7 @@ const album_list = {
         album: '彩色斑马讲科学',
         dup_break: false // 相同的是否break
     },
-}
-
+};
 
 export default class LizhiListing extends LoadParser {
 
@@ -57,7 +56,7 @@ export default class LizhiListing extends LoadParser {
         book.author = a.attr('data-user-name');
 
         let $ = await this.load(LIZHI_HOST + a.attr('href'));
-        book.cover = $('.js-play-data').attr('data-cover');
+        book.cover = $('.audioCover img').attr('src').replace(/_320x320/g, '');
         book.duration = $('.js-play-data').attr('data-duration');
         book.short = $('.desText').html();
         return book;
@@ -95,7 +94,7 @@ async function run(){
                 let musicFile = await nkl.downloadFile(story.mp3, FILE_ROOT + '/' + albumInfo.album, story.title + '.mp3');
                 if (!musicFile) continue;
                 let $ = await nkl.load(`${LIZHI_HOST}${story.href}`);
-                story.cover = $('.js-play-data').attr('data-cover');
+                story.cover = $('.audioCover img').attr('src').replace(/_320x320/g, '');
                 story.duration = $('.js-play-data').attr('data-duration');
                 story.short = nkl.decode($('.desText').html());
                 let imageFile = await nkl.downloadFile(story.cover, FILE_ROOT + '/' + albumInfo.album, story.title + '.png');

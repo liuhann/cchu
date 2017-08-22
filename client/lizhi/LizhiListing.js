@@ -60,7 +60,7 @@ class LizhiListing extends LoadParser_1.default {
             book.album = a.attr('data-radio-name');
             book.author = a.attr('data-user-name');
             let $ = yield this.load(LIZHI_HOST + a.attr('href'));
-            book.cover = $('.js-play-data').attr('data-cover');
+            book.cover = $('.audioCover img').attr('src').replace(/_320x320/g, '');
             book.duration = $('.js-play-data').attr('data-duration');
             book.short = $('.desText').html();
             return book;
@@ -97,7 +97,7 @@ function run() {
                     if (!musicFile)
                         continue;
                     let $ = yield nkl.load(`${LIZHI_HOST}${story.href}`);
-                    story.cover = $('.js-play-data').attr('data-cover');
+                    story.cover = $('.audioCover img').attr('src').replace(/_320x320/g, '');
                     story.duration = $('.js-play-data').attr('data-duration');
                     story.short = nkl.decode($('.desText').html());
                     let imageFile = yield nkl.downloadFile(story.cover, FILE_ROOT + '/' + albumInfo.album, story.title + '.png');
