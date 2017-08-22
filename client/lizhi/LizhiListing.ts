@@ -13,15 +13,13 @@ const album_list = {
     },
     '25681': {
         album: '凯叔讲故事',
-        start: 65,
+        start: 66,
         dup_break: false // 相同的是否break
     },
     '1682240': {
         album: '彩色斑马讲科学',
         dup_break: false // 相同的是否break
     },
-
-
 }
 
 
@@ -38,7 +36,7 @@ export default class LizhiListing extends LoadParser {
         for(let li of Array.from($('.js-audio-list').find('li'))) {
             let story: any = {};
             let a = $(li).find('a.audio-list-item');
-            story.title = a.attr('title');
+            story.title = this.replaceName(a.attr('title'));
             story.album = a.attr('data-radio-name');
             story.href = a.attr('href')
             story.author = a.attr('data-user-name');

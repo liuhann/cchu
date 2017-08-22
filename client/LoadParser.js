@@ -40,6 +40,9 @@ class LoadParser {
             return '';
         }
     }
+    replaceName(name) {
+        return name.replace(/[\/:*?"<>|]/g, '');
+    }
     postCover(localFile) {
         return __awaiter(this, void 0, void 0, function* () {
             let formData = new FormData();

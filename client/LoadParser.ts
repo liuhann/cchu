@@ -14,6 +14,7 @@ abstract class LoadParser {
     static parsers = new Map<string,LoadParser>();
 
     constructor() {
+
     }
 
     static addParser(parser: LoadParser, type:string) {
@@ -36,6 +37,10 @@ abstract class LoadParser {
         } else {
             return '';
         }
+    }
+
+    replaceName(name:string): string {
+        return name.replace(/[\/:*?"<>|]/g, '');
     }
 
     async postCover(localFile:string):Promise<string> {
