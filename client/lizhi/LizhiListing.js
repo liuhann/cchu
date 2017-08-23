@@ -16,15 +16,42 @@ const FILE_ROOT = 'E:/lizhi';
 const album_list = {
     '982236': {
         album: '小柚子故事屋',
-        dup_break: false // 相同的是否break
+        dup_break: true // 相同的是否break
     },
     '25681': {
         album: '凯叔讲故事',
-        start: 66,
-        dup_break: false // 相同的是否break
+        dup_break: true // 相同的是否break
     },
     '1682240': {
         album: '彩色斑马讲科学',
+        dup_break: true // 相同的是否break
+    },
+    '1455354': {
+        album: '园长妈妈的睡前故事',
+        dup_break: true // 相同的是否break
+    },
+    '1908715': {
+        album: '火火兔儿童FM',
+        dup_break: true // 相同的是否break
+    },
+    '1967306': {
+        album: '小猪佩奇',
+        dup_break: true // 相同的是否break
+    },
+    '3804713': {
+        album: '米小圈广播剧',
+        dup_break: false // 相同的是否break
+    },
+    '428496': {
+        album: '彩色斑马讲故事',
+        dup_break: false // 相同的是否break
+    },
+    '380030': {
+        album: '微小宝睡前童话故事',
+        dup_break: false // 相同的是否break
+    },
+    '358962': {
+        album: '班迪故事口袋',
         dup_break: false // 相同的是否break
     },
 };
@@ -81,34 +108,39 @@ function run() {
             while (list.length) {
                 let dup_breaked = false;
                 for (let story of list) {
-                    story.album = albumInfo.album;
-                    if (fs.existsSync(`${FILE_ROOT}/${story.album}/${story.title}.mp3`)) {
-                        if (albumInfo.dup_break) {
-                            dup_breaked = true;
-                            break;
+                    try {
+                        story.album = albumInfo.album;
+                        if (fs.existsSync(`${FILE_ROOT}/${story.album}/${story.title}.mp3`)) {
+                            if (albumInfo.dup_break) {
+                                dup_breaked = true;
+                                break;
+                            }
+                            else {
+                                continue;
+                            }
                         }
-                        else {
+                        yield nkl.delay(2000 + Math.random() * 1000);
+                        //mp3 download
+                        let musicFile = yield nkl.downloadFile(story.mp3, FILE_ROOT + '/' + albumInfo.album, story.title + '.mp3');
+                        if (!musicFile)
                             continue;
-                        }
+                        let $ = yield nkl.load(`${LIZHI_HOST}${story.href}`);
+                        story.cover = $('.audioCover img').attr('src').replace(/_320x320/g, '');
+                        story.duration = $('.js-play-data').attr('data-duration');
+                        story.short = nkl.decode($('.desText').html());
+                        let imageFile = yield nkl.downloadFile(story.cover, FILE_ROOT + '/' + albumInfo.album, story.title + '.png');
+                        if (!imageFile)
+                            continue;
+                        yield nkl.postStory(story, `${FILE_ROOT}/${story.album}/${story.title}.png`);
                     }
-                    yield nkl.delay(5000 + Math.random() * 1000);
-                    //mp3 download
-                    let musicFile = yield nkl.downloadFile(story.mp3, FILE_ROOT + '/' + albumInfo.album, story.title + '.mp3');
-                    if (!musicFile)
-                        continue;
-                    let $ = yield nkl.load(`${LIZHI_HOST}${story.href}`);
-                    story.cover = $('.audioCover img').attr('src').replace(/_320x320/g, '');
-                    story.duration = $('.js-play-data').attr('data-duration');
-                    story.short = nkl.decode($('.desText').html());
-                    let imageFile = yield nkl.downloadFile(story.cover, FILE_ROOT + '/' + albumInfo.album, story.title + '.png');
-                    if (!imageFile)
-                        continue;
-                    yield nkl.postStory(story, `${FILE_ROOT}/${story.album}/${story.title}.png`);
+                    catch (e) {
+                        console.log(`story failed`);
+                    }
                 }
-                itor++;
-                list = yield nkl.loadData(`${LIZHI_HOST}/${albumId}/p/${itor}.html`);
                 if (dup_breaked)
                     break;
+                itor++;
+                list = yield nkl.loadData(`${LIZHI_HOST}/${albumId}/p/${itor}.html`);
             }
         }
     });
