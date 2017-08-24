@@ -14,7 +14,7 @@ const fetch = require("node-fetch");
 const LIZHI_HOST = "https://www.lizhi.fm";
 const FILE_ROOT = 'E:/lizhi';
 const album_list = {
-    '982236': {
+    /*'982236': {
         album: '小柚子故事屋',
         dup_break: true // 相同的是否break
     },
@@ -38,20 +38,41 @@ const album_list = {
         album: '小猪佩奇',
         dup_break: true // 相同的是否break
     },
+
     '3804713': {
         album: '米小圈广播剧',
         dup_break: false // 相同的是否break
     },
     '428496': {
         album: '彩色斑马讲故事',
-        dup_break: false // 相同的是否break
+        dup_break: true // 相同的是否break
     },
     '380030': {
         album: '微小宝睡前童话故事',
-        dup_break: false // 相同的是否break
+        dup_break: true // 相同的是否break
     },
     '358962': {
         album: '班迪故事口袋',
+        dup_break: true // 相同的是否break
+    },*/
+    '1606128': {
+        album: '酷爸辣妈睡前故事',
+        dup_break: false // 相同的是否break
+    },
+    '1941087': {
+        album: '金色童年睡前故事',
+        dup_break: false // 相同的是否break
+    },
+    '1428502': {
+        album: 'Lisa姐姐讲故事',
+        dup_break: false // 相同的是否break
+    },
+    '60670': {
+        album: '毛毛阿姨的故事屋',
+        dup_break: false // 相同的是否break
+    },
+    '297124': {
+        album: '小雪老师讲故事',
         dup_break: false // 相同的是否break
     },
 };
