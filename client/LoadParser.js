@@ -95,6 +95,21 @@ class LoadParser {
             }
         });
     }
+    postAlbum(album) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let result = yield node_fetch_1.default(HOST + `/lizhi/album/add?id=${album.id}&name=${encodeURIComponent(album.name)}&cover=${album.cover}`, {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                });
+                yield result.json();
+            }
+            catch (e) {
+            }
+        });
+    }
     downloadFile(remoteUrl, localFolder, fileName) {
         return __awaiter(this, void 0, void 0, function* () {
             if (!remoteUrl)
@@ -128,6 +143,10 @@ class LoadParser {
             let $ = cheerio.load(text);
             console.log(url + '  loaded');
             return $;
+        });
+    }
+    loadData(url) {
+        return __awaiter(this, void 0, void 0, function* () {
         });
     }
 }

@@ -92,7 +92,21 @@ abstract class LoadParser {
         } catch (e) {
 
         }
+    }
 
+
+    async postAlbum(album) {
+        try {
+            let result = await fetch(HOST + `/lizhi/album/add?id=${album.id}&name=${encodeURIComponent(album.name)}&cover=${album.cover}`, {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            });
+            await result.json();
+        } catch (e) {
+
+        }
     }
 
     async downloadFile(remoteUrl: string, localFolder: string, fileName?:string): Promise<any> {
@@ -127,7 +141,9 @@ abstract class LoadParser {
         return $;
     }
 
-    abstract async loadData(url:string): Promise<any>;
+    async loadData(url:string): Promise<any> {
+
+    }
 }
 
 export default LoadParser;
