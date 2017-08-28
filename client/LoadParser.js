@@ -16,6 +16,13 @@ const formData = require("form-data");
 const HOST = "http://jinjing.duapp.com";
 class LoadParser {
     constructor() {
+        this.getOptions = {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        };
     }
     static addParser(parser, type) {
         LoadParser.parsers.set(type, parser);
@@ -53,6 +60,49 @@ class LoadParser {
             });
             let result = yield fetching.json();
             return result.id;
+        });
+    }
+    updateStory(story) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let fetching = yield node_fetch_1.default(`${HOST}/story/properties/update?story=${story._id}`, {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(story)
+            });
+            if (fetching.status === 200) {
+                return yield fetching.json();
+            }
+            else {
+                throw new Error('update failed');
+            }
+        });
+    }
+    createStory(story) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let result = yield node_fetch_1.default(HOST + "/story/create", {
+                    method: "POST",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        title: story.title,
+                        album: story.album,
+                        short: story.short,
+                        path: story.album + '/' + story.title + '.mp3',
+                        duration: story.duration,
+                        cover: story.cover
+                    })
+                });
+                return yield result.json();
+            }
+            catch (e) {
+                throw new Error('create failed');
+            }
         });
     }
     // create story

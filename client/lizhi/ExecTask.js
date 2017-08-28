@@ -9,39 +9,139 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const node_fetch_1 = require("node-fetch");
+const fs = require("fs");
+const uuidv4 = require('uuid/v4');
 const HOST = "http://jinjing.duapp.com";
 const LIZHI_HOST = "https://www.lizhi.fm";
 const LoadParser_1 = require("../LoadParser");
+const BOSService_1 = require("../BOSService");
+const FILE_ROOT = 'E:/lizhi';
+const uuidv5 = require('uuid/v5');
+const getOptions = {
+    method: 'GET',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    }
+};
 class ExecTask extends LoadParser_1.default {
+    constructor() {
+        super();
+        this.bos = new BOSService_1.default();
+    }
     //1 pop task
     popTask() {
         return __awaiter(this, void 0, void 0, function* () {
-            const fetching = yield node_fetch_1.default(`${HOST}/task/pop`, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-            });
+            const fetching = yield node_fetch_1.default(`${HOST}/task/pop`, getOptions);
+            const task = yield fetching.json();
+            return task.result;
+        });
+    }
+    //http://jinjing.duapp.com/story/one?album=xxx&title=xxxxx
+    fetchStoryInfo(album, title) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const fetching = yield node_fetch_1.default(`${HOST}/story/one?album=${encodeURIComponent(album)}&title=${encodeURIComponent(title)}`, getOptions);
+            if (fetching.status != 200) {
+                return null;
+            }
+            const task = yield fetching.json();
+            return task.result;
+        });
+    }
+    //http://jinjing.duapp.com/task/finish?taskId=https://www.lizhi.fm/297124/15928136997309190
+    finishTask(taskId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const fetching = yield node_fetch_1.default(`${HOST}/task/finish?taskId=${taskId}`, getOptions);
             const task = yield fetching.json();
             return task;
         });
     }
+    getDetailByTaskId(taskId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let $ = yield this.load(`${taskId}`);
+            const detail = {};
+            const divPlayData = $('.js-play-data');
+            detail.cover = $('.audioCover img').attr('src').replace(/_320x320/g, '');
+            detail.duration = divPlayData.attr('data-duration');
+            detail.short = this.decode($('.desText').html());
+            detail.title = divPlayData.attr('data-title');
+            detail.author = divPlayData.attr('data-user-name');
+            detail.mp3 = divPlayData.attr('data-url');
+            //story.cover = a.attr('data-cover');
+            return detail;
+        });
+    }
     popRun() {
-        //1 pop task
-        //2 fetch detail
-        //3 check local exists and download mp3 and cover
-        //4 check remote and upload
-        //4.1 check story
-        //4.2 upload image if not exist
-        //4.3 upload story if not exist
-        //4.4 update story
-        //5 mark task as finished
+        return __awaiter(this, void 0, void 0, function* () {
+            //1 pop task
+            const task = yield this.popTask();
+            console.log('task', task.album, task.story);
+            //2 fetch detail from lizhi
+            const storyDetail = yield this.getDetailByTaskId(task.taskId);
+            console.log('cover', storyDetail.cover);
+            //3 check local exists and download mp3 and cover
+            //3.1 make local album dir
+            if (!fs.existsSync(FILE_ROOT + '/' + task.album)) {
+                fs.mkdirSync(FILE_ROOT + '/' + task.album);
+            }
+            //3.2 check or download mp3
+            if (!fs.existsSync(`${FILE_ROOT}/${task.album}/${task.story}.mp3`)) {
+                let musicFile = yield this.downloadFile(storyDetail.mp3, `${FILE_ROOT}/${task.album}`, task.story + '.mp3');
+            }
+            //3.3 check or download image
+            if (!fs.existsSync(`${FILE_ROOT}/${task.album}/${task.story}.png`)) {
+                let musicFile = yield this.downloadFile(storyDetail.cover, `${FILE_ROOT}/${task.album}`, task.story + '.png');
+            }
+            //4 fetch yb story info
+            const storyInfo = yield this.fetchStoryInfo(task.album, task.story);
+            //4.1 check or upload mp3
+            const bosMp3Path = `${task.album}/${task.story}.mp3`;
+            const mp3exist = yield this.bos.fileExist('chuchu', bosMp3Path);
+            if (!mp3exist) {
+                yield this.bos.uploadFile('chuchu', bosMp3Path, `${FILE_ROOT}/${task.album}/${task.story}.mp3`, storyDetail.duration);
+            }
+            console.log('bosMp3Path: ', bosMp3Path);
+            //4.2 check or upload image
+            let bosCoverPath = (storyInfo && storyInfo.cover) || null;
+            if (!bosCoverPath) {
+                bosCoverPath = uuidv4();
+                yield this.bos.uploadFile('imagek', bosCoverPath + '.png', `${FILE_ROOT}/${task.album}/${task.story}.png`, 0);
+            }
+            console.log('bosCoverPath: ', bosCoverPath);
+            //5 upload/update story
+            if (storyInfo) {
+                //5.1 update
+                storyInfo.path = bosMp3Path;
+                storyInfo.cover = bosCoverPath;
+                yield this.updateStory(storyInfo);
+                console.log('story updated');
+            }
+            else {
+                yield this.createStory({
+                    title: task.story,
+                    album: task.album,
+                    short: storyDetail.short,
+                    path: bosMp3Path,
+                    duration: storyDetail.duration,
+                    cover: bosCoverPath
+                });
+                console.log('story created');
+            }
+            //6 mark task as finished
+            return yield this.finishTask(task.taskId);
+        });
     }
     exec() {
         return __awaiter(this, void 0, void 0, function* () {
-            let r = yield et.popTask();
-            console.log(r);
+            try {
+                let r = yield et.popRun();
+                console.log('upload complete', r);
+            }
+            catch (e) {
+                console.log(e);
+            }
+            //await bos.fileExist('chuchu', '0-3岁宝宝故事', '0-3岁宝宝故事.jpg')
+            //await bos.uploadFile('chuchu', '00test/', '【凯叔讲故事】35.老水手波特（下）（在挑战中获得新知）.mp3', 'E:/lizhi/凯叔讲故事/【凯叔讲故事】35.老水手波特（下）（在挑战中获得新知）.mp3', 223211);
         });
     }
 }

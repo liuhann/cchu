@@ -19,6 +19,7 @@ const LizhiListing_1 = require("./LizhiListing");
 //http://jinjing.duapp.com/lizhi/album/update?id=1975543
 const HOST = "http://jinjing.duapp.com";
 const LIZHI_HOST = "https://www.lizhi.fm";
+const FILE_ROOT = 'E:/lizhi';
 class BokeListing extends LoadParser_1.default {
     loadData(url) {
         return __awaiter(this, void 0, void 0, function* () {

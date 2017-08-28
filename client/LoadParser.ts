@@ -17,6 +17,15 @@ abstract class LoadParser {
 
     }
 
+
+    getOptions = {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    };
+
     static addParser(parser: LoadParser, type:string) {
         LoadParser.parsers.set(type, parser);
     }
@@ -52,6 +61,45 @@ abstract class LoadParser {
         });
         let result = await fetching.json();
         return result.id;
+    }
+
+    async updateStory(story: any):Promise<any> {
+        let fetching = await fetch(`${HOST}/story/properties/update?story=${story._id}`, {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(story)
+        });
+        if (fetching.status === 200) {
+            return await fetching.json();
+        } else {
+            throw new Error('update failed');
+        }
+    }
+
+    async createStory(story:any):Promise<any> {
+        try {
+            let result = await fetch(HOST + "/story/create",{
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    title: story.title,
+                    album: story.album,
+                    short: story.short,
+                    path: story.album + '/' + story.title + '.mp3',
+                    duration: story.duration,
+                    cover: story.cover
+                })
+            });
+            return await result.json();
+        } catch (e) {
+            throw new Error('create failed');
+        }
     }
 
     // create story

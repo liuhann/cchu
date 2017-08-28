@@ -14,8 +14,10 @@ import LizhiListing from "./LizhiListing";
 
 const HOST = "http://jinjing.duapp.com";
 const LIZHI_HOST = "https://www.lizhi.fm";
+const FILE_ROOT = 'E:/lizhi';
 
-class BokeListing extends  LoadParser {
+
+class BokeListing extends LoadParser {
 
     nkl: LizhiListing;
     async loadData(url:string): Promise<any> {
