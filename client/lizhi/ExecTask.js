@@ -136,11 +136,11 @@ class ExecTask extends LoadParser_1.default {
                 try {
                     let r = yield et.runTask(task);
                     console.log('upload complete', r);
+                    task = yield this.popTask();
                 }
                 catch (e) {
                     console.log(e);
                 }
-                task = yield this.popTask();
                 yield this.delay(4000 + Math.random() * 4000);
             }
         });

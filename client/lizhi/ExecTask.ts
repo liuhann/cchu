@@ -138,10 +138,10 @@ class ExecTask extends LoadParser {
             try {
                 let r = await et.runTask(task);
                 console.log('upload complete', r);
+                task = await this.popTask();
             } catch (e) {
                 console.log(e);
             }
-            task = await this.popTask();
             await this.delay(4000 + Math.random()*4000);
         }
     }
