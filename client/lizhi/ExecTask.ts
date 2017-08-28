@@ -7,9 +7,7 @@ const LIZHI_HOST = "https://www.lizhi.fm";
 
 import LoadParser from "../LoadParser";
 import BOSService from "../BOSService";
-const FILE_ROOT = 'E:/lizhi';
-const uuidv5 = require('uuid/v5');
-
+const FILE_ROOT = 'F:/lizhi';
 
 const getOptions = {
     method: 'GET',
@@ -42,7 +40,7 @@ class ExecTask extends LoadParser {
             return null;
         }
         const task = await fetching.json();
-        return task.result;
+        return task;
     }
 
 
@@ -67,9 +65,8 @@ class ExecTask extends LoadParser {
         return detail;
     }
 
-    async popRun() {
+    async runTask(task) {
         //1 pop task
-        const task = await this.popTask();
         console.log('task', task.album, task.story);
 
         //2 fetch detail from lizhi
@@ -136,17 +133,17 @@ class ExecTask extends LoadParser {
     }
 
     async exec() {
-
-        try {
-            let r = await et.popRun();
-            console.log('upload complete', r);
-        } catch (e) {
-            console.log(e);
+        let task = await this.popTask();
+        while(task) {
+            try {
+                let r = await et.runTask(task);
+                console.log('upload complete', r);
+            } catch (e) {
+                console.log(e);
+            }
+            task = await this.popTask();
+            await this.delay(4000 + Math.random()*4000);
         }
-
-        //await bos.fileExist('chuchu', '0-3岁宝宝故事', '0-3岁宝宝故事.jpg')
-
-        //await bos.uploadFile('chuchu', '00test/', '【凯叔讲故事】35.老水手波特（下）（在挑战中获得新知）.mp3', 'E:/lizhi/凯叔讲故事/【凯叔讲故事】35.老水手波特（下）（在挑战中获得新知）.mp3', 223211);
     }
 }
 

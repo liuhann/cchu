@@ -15,8 +15,7 @@ const HOST = "http://jinjing.duapp.com";
 const LIZHI_HOST = "https://www.lizhi.fm";
 const LoadParser_1 = require("../LoadParser");
 const BOSService_1 = require("../BOSService");
-const FILE_ROOT = 'E:/lizhi';
-const uuidv5 = require('uuid/v5');
+const FILE_ROOT = 'F:/lizhi';
 const getOptions = {
     method: 'GET',
     headers: {
@@ -45,7 +44,7 @@ class ExecTask extends LoadParser_1.default {
                 return null;
             }
             const task = yield fetching.json();
-            return task.result;
+            return task;
         });
     }
     //http://jinjing.duapp.com/task/finish?taskId=https://www.lizhi.fm/297124/15928136997309190
@@ -71,10 +70,9 @@ class ExecTask extends LoadParser_1.default {
             return detail;
         });
     }
-    popRun() {
+    runTask(task) {
         return __awaiter(this, void 0, void 0, function* () {
             //1 pop task
-            const task = yield this.popTask();
             console.log('task', task.album, task.story);
             //2 fetch detail from lizhi
             const storyDetail = yield this.getDetailByTaskId(task.taskId);
@@ -133,15 +131,18 @@ class ExecTask extends LoadParser_1.default {
     }
     exec() {
         return __awaiter(this, void 0, void 0, function* () {
-            try {
-                let r = yield et.popRun();
-                console.log('upload complete', r);
+            let task = yield this.popTask();
+            while (task) {
+                try {
+                    let r = yield et.runTask(task);
+                    console.log('upload complete', r);
+                }
+                catch (e) {
+                    console.log(e);
+                }
+                task = yield this.popTask();
+                yield this.delay(4000 + Math.random() * 4000);
             }
-            catch (e) {
-                console.log(e);
-            }
-            //await bos.fileExist('chuchu', '0-3岁宝宝故事', '0-3岁宝宝故事.jpg')
-            //await bos.uploadFile('chuchu', '00test/', '【凯叔讲故事】35.老水手波特（下）（在挑战中获得新知）.mp3', 'E:/lizhi/凯叔讲故事/【凯叔讲故事】35.老水手波特（下）（在挑战中获得新知）.mp3', 223211);
         });
     }
 }
