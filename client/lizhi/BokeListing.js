@@ -85,15 +85,10 @@ class BokeListing extends LoadParser_1.default {
      * when album itered, mark update time as today
      * @returns {Promise<void>}
      */
+    // http://jinjing.duapp.com/lizhi/album/pop
     execAddAlbumTask() {
         return __awaiter(this, void 0, void 0, function* () {
-            let result = yield node_fetch_1.default(HOST + "/lizhi/album/list", {
-                method: "GET",
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-            });
+            let result = yield node_fetch_1.default(HOST + "/lizhi/album/pop", this.getOptions);
             let albums = yield result.json();
             albums = albums.result;
             this.nkl = new LizhiListing_1.default();

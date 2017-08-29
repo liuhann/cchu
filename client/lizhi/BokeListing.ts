@@ -79,14 +79,11 @@ class BokeListing extends LoadParser {
      * when album itered, mark update time as today
      * @returns {Promise<void>}
      */
+
+    // http://jinjing.duapp.com/lizhi/album/pop
     async execAddAlbumTask() {
-        let result = await fetch(HOST + "/lizhi/album/list", {
-            method: "GET",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        });
+
+        let result = await fetch(HOST + "/lizhi/album/pop", this.getOptions);
         let albums = await result.json();
 
         albums = albums.result;
