@@ -29,7 +29,7 @@ class BokeListing extends LoadParser_1.default {
             for (let album of Array.from(lists)) {
                 const info = {};
                 info.id = $(album).find('a.radioCover').attr('href').replace(/[/]/g, '');
-                info.name = this.decode($(album).find('.radioName a').html().replace(/[ \n\r]/g, ''));
+                info.name = this.replaceName(this.decode($(album).find('.radioName a').html().replace(/[ \n\r]/g, '')));
                 info.cover = $(album).find('img').first().attr('data-echo').replace(/_[0-9]{3}x[0-9]{3}/g, '');
                 result.push(info);
             }
@@ -44,13 +44,14 @@ class BokeListing extends LoadParser_1.default {
     execFetchAlbum() {
         return __awaiter(this, void 0, void 0, function* () {
             let i = 1;
-            let albums = yield this.loadData(`http://www.lizhi.fm/label/24229978817701040/${i}.html`);
+            let albums = yield this.loadData(`http://www.lizhi.fm/label/24229975059604400/${i}.html`);
             while (albums.length) {
                 for (let album of albums) {
+                    yield this.delay(1000);
                     yield this.postAlbum(album);
                 }
                 i++;
-                albums = yield this.loadData(`http://www.lizhi.fm/label/24229978817701040/${i}.html`);
+                albums = yield this.loadData(`http://www.lizhi.fm/label/24229975059604400/${i}.html`);
             }
         });
     }
@@ -121,7 +122,8 @@ class BokeListing extends LoadParser_1.default {
     }
     run() {
         return __awaiter(this, void 0, void 0, function* () {
-            yield this.execAddAlbumTask();
+            yield this.execFetchAlbum();
+            //await this.execAddAlbumTask();
         });
     }
 }

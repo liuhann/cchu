@@ -142,18 +142,19 @@ abstract class LoadParser {
         }
     }
 
-
     async postAlbum(album) {
         try {
+            console.log('+album', album.id, album.name);
             let result = await fetch(HOST + `/lizhi/album/add?id=${album.id}&name=${encodeURIComponent(album.name)}&cover=${album.cover}`, {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 }
             });
-            await result.json();
+            const json = await result.json();
+            return json;
         } catch (e) {
-
+            return this.postAlbum(album);
         }
     }
 

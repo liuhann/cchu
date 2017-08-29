@@ -2,12 +2,10 @@ import LoadParser from "../LoadParser";
 import fetch from "node-fetch";
 import LizhiListing from "./LizhiListing";
 
-
 //http://jinjing.duapp.com/task/create?album=小柚子&story=小山羊&taskId=https://www.lizhi.fm/297124/15928136997309190
 //http://jinjing.duapp.com/task/pop
 //http://jinjing.duapp.com/task/finish?taskId=https://www.lizhi.fm/297124/15928136997309190
 //http://jinjing.duapp.com/task/exist?taskId=https://www.lizhi.fm/297124/15928136997309190
-
 
 //http://jinjing.duapp.com/lizhi/album/add?id=25681&name=凯叔讲故事&cover=zzz
 //http://jinjing.duapp.com/lizhi/album/update?id=1975543
@@ -27,7 +25,7 @@ class BokeListing extends LoadParser {
         for(let album of Array.from(lists)) {
             const info:any = {};
             info.id = $(album).find('a.radioCover').attr('href').replace(/[/]/g, '');
-            info.name = this.decode($(album).find('.radioName a').html().replace(/[ \n\r]/g, ''));
+            info.name = this.replaceName(this.decode($(album).find('.radioName a').html().replace(/[ \n\r]/g, '')));
             info.cover = $(album).find('img').first().attr('data-echo').replace(/_[0-9]{3}x[0-9]{3}/g, '');
             result.push(info);
         }
@@ -41,20 +39,19 @@ class BokeListing extends LoadParser {
      */
     async execFetchAlbum() {
         let i = 1;
-        let albums = await this.loadData(`http://www.lizhi.fm/label/24229978817701040/${i}.html`);
+        let albums = await this.loadData(`http://www.lizhi.fm/label/24229975059604400/${i}.html`);
         while(albums.length) {
             for(let album of albums) {
+                await this.delay(1000);
                 await this.postAlbum(album);
             }
-           i++;
-            albums = await this.loadData(`http://www.lizhi.fm/label/24229978817701040/${i}.html`);
+            i++;
+            albums = await this.loadData(`http://www.lizhi.fm/label/24229975059604400/${i}.html`);
         }
     }
 
-
     async addTask(story) {
         //http://jinjing.duapp.com/task/create?album=小柚子&story=小山羊&taskId=https://www.lizhi.fm/297124/15928136997309190//
-
         let result = await fetch(HOST + `/task/create?album=${encodeURIComponent(story.album)}&story=${encodeURIComponent(story.title)}&taskId=${LIZHI_HOST+story.href}`, {
                 method: "GET",
                 headers: {
@@ -121,7 +118,8 @@ class BokeListing extends LoadParser {
     }
 
     async run() {
-        await this.execAddAlbumTask();
+        await this.execFetchAlbum();
+        //await this.execAddAlbumTask();
     }
 }
 

@@ -148,15 +148,18 @@ class LoadParser {
     postAlbum(album) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                console.log('+album', album.id, album.name);
                 let result = yield node_fetch_1.default(HOST + `/lizhi/album/add?id=${album.id}&name=${encodeURIComponent(album.name)}&cover=${album.cover}`, {
                     headers: {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json'
                     }
                 });
-                yield result.json();
+                const json = yield result.json();
+                return json;
             }
             catch (e) {
+                return this.postAlbum(album);
             }
         });
     }
