@@ -55,8 +55,9 @@ class ExecTask extends LoadParser {
         const detail:any = {};
         const divPlayData = $('.js-play-data');
         detail.cover = $('.audioCover img').attr('src').replace(/_320x320/g, '');
-        detail.duration = divPlayData.attr('data-duration');
         detail.short = this.decode($('.desText').html());
+        detail.albumCover = divPlayData.attr('data-cover');
+        detail.duration = divPlayData.attr('data-duration');
         detail.title = divPlayData.attr('data-title');
         detail.author = divPlayData.attr('data-user-name');
         detail.mp3 = divPlayData.attr('data-url');

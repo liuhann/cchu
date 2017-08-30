@@ -18,6 +18,9 @@ const FILE_ROOT = 'E:/lizhi';
 class BokeListing extends LoadParser {
 
     nkl: LizhiListing;
+
+    lastPage: number;
+
     async loadData(url:string): Promise<any> {
         let $ = await this.load(url);
         const lists = $('ul.allRadioList li.radio_list');
@@ -91,9 +94,7 @@ class BokeListing extends LoadParser {
             return false;
         }
         console.log('album:' + album.name);
-
         this.nkl = new LizhiListing();
-
         //need check?
         if (album.u) {
             if (new Date().getTime() - new Date(album.u).getTime()<24*60*60*1000) {
@@ -101,7 +102,7 @@ class BokeListing extends LoadParser {
             }
         }
 
-        let page = 1; //start from page 1
+        let page = album.last || this.lastPage || 1; //start from page 1
         this.delay(1000);
         let list = await this.nkl.loadData(`http://www.lizhi.fm/${album.id}/p/${page}.html`);
 
@@ -119,24 +120,25 @@ class BokeListing extends LoadParser {
                 }
             }
             page ++;
+            this.lastPage = page;
             this.delay(1000);
             list = await this.nkl.loadData(`http://www.lizhi.fm/${album.id}/p/${page}.html`);
         }
         //at last  mark album today
         await this.markAlbumToday(album.id);
         console.log('task completed. total : ' + storyInc);
+        this.lastPage = 1;
         return true;
     }
 
     async run() {
         //await this.execFetchAlbum();
-
         while (true) {
             try {
-               let exe =  await this.execAddAlbumTask();
-               if (!exe) break;
+                let exe =  await this.execAddAlbumTask();
+                if (!exe) break;
             } catch (e) {
-
+                console.log(e);
             }
         }
     }

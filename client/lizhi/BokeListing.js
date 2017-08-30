@@ -103,7 +103,7 @@ class BokeListing extends LoadParser_1.default {
                     return true;
                 }
             }
-            let page = 1; //start from page 1
+            let page = album.last || this.lastPage || 1; //start from page 1
             this.delay(1000);
             let list = yield this.nkl.loadData(`http://www.lizhi.fm/${album.id}/p/${page}.html`);
             let storyInc = 0;
@@ -120,12 +120,14 @@ class BokeListing extends LoadParser_1.default {
                     }
                 }
                 page++;
+                this.lastPage = page;
                 this.delay(1000);
                 list = yield this.nkl.loadData(`http://www.lizhi.fm/${album.id}/p/${page}.html`);
             }
             //at last  mark album today
             yield this.markAlbumToday(album.id);
             console.log('task completed. total : ' + storyInc);
+            this.lastPage = 1;
             return true;
         });
     }
@@ -139,6 +141,7 @@ class BokeListing extends LoadParser_1.default {
                         break;
                 }
                 catch (e) {
+                    console.log(e);
                 }
             }
         });
