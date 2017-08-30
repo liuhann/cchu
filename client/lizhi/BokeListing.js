@@ -65,7 +65,7 @@ class BokeListing extends LoadParser_1.default {
                     'Content-Type': 'application/json'
                 }
             });
-            yield result.json();
+            return yield result.json();
         });
     }
     markAlbumToday(id) {
@@ -88,37 +88,59 @@ class BokeListing extends LoadParser_1.default {
     // http://jinjing.duapp.com/lizhi/album/pop
     execAddAlbumTask() {
         return __awaiter(this, void 0, void 0, function* () {
+            //1 pop a album
             let result = yield node_fetch_1.default(HOST + "/lizhi/album/pop", this.getOptions);
-            let albums = yield result.json();
-            albums = albums.result;
-            this.nkl = new LizhiListing_1.default();
-            //iter each album
-            for (let album of albums) {
-                if (album.u) {
-                    if (new Date().getTime() - new Date(album.u).getTime() < 24 * 60 * 60 * 1000) {
-                        continue;
-                    }
-                }
-                let page = 1; //start from page 1
-                this.delay(1000);
-                let list = yield this.nkl.loadData(`http://www.lizhi.fm/${album.id}/p/${page}.html`);
-                while (list.length) {
-                    for (let story of list) {
-                        story.album = album.name;
-                        yield this.addTask(story);
-                    }
-                    page++;
-                    this.delay(1000);
-                    list = yield this.nkl.loadData(`http://www.lizhi.fm/${album.id}/p/${page}.html`);
-                }
-                yield this.markAlbumToday(album.id);
+            const albums = yield result.json();
+            const album = albums.result;
+            if (album == null) {
+                return false;
             }
+            console.log('album:' + album.name);
+            this.nkl = new LizhiListing_1.default();
+            //need check?
+            if (album.u) {
+                if (new Date().getTime() - new Date(album.u).getTime() < 24 * 60 * 60 * 1000) {
+                    return true;
+                }
+            }
+            let page = 1; //start from page 1
+            this.delay(1000);
+            let list = yield this.nkl.loadData(`http://www.lizhi.fm/${album.id}/p/${page}.html`);
+            let storyInc = 0;
+            while (list.length) {
+                for (let story of list) {
+                    story.album = album.name;
+                    const inserted = yield this.addTask(story);
+                    console.log('+task ' + story.title);
+                    storyInc++;
+                    if (inserted.result === 'existed' && album.u) {
+                        yield this.markAlbumToday(album.id);
+                        console.log('+existed & task completed total: ' + storyInc);
+                        return true;
+                    }
+                }
+                page++;
+                this.delay(1000);
+                list = yield this.nkl.loadData(`http://www.lizhi.fm/${album.id}/p/${page}.html`);
+            }
+            //at last  mark album today
+            yield this.markAlbumToday(album.id);
+            console.log('task completed. total : ' + storyInc);
+            return true;
         });
     }
     run() {
         return __awaiter(this, void 0, void 0, function* () {
-            yield this.execFetchAlbum();
-            //await this.execAddAlbumTask();
+            //await this.execFetchAlbum();
+            while (true) {
+                try {
+                    let exe = yield this.execAddAlbumTask();
+                    if (!exe)
+                        break;
+                }
+                catch (e) {
+                }
+            }
         });
     }
 }

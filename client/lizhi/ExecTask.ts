@@ -43,7 +43,6 @@ class ExecTask extends LoadParser {
         return task;
     }
 
-
     //http://jinjing.duapp.com/task/finish?taskId=https://www.lizhi.fm/297124/15928136997309190
     async finishTask(taskId:string): Promise<any> {
         const fetching = await fetch(`${HOST}/task/finish?taskId=${taskId}`, getOptions);
