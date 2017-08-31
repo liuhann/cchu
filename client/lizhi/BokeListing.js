@@ -17,7 +17,7 @@ const LizhiListing_1 = require("./LizhiListing");
 //http://jinjing.duapp.com/task/exist?taskId=https://www.lizhi.fm/297124/15928136997309190
 //http://jinjing.duapp.com/lizhi/album/add?id=25681&name=凯叔讲故事&cover=zzz
 //http://jinjing.duapp.com/lizhi/album/update?id=1975543
-const HOST = "http://jinjing.duapp.com";
+const HOST = "https://jinjing.duapp.com";
 const LIZHI_HOST = "https://www.lizhi.fm";
 const FILE_ROOT = 'E:/lizhi';
 class BokeListing extends LoadParser_1.default {
@@ -58,14 +58,19 @@ class BokeListing extends LoadParser_1.default {
     addTask(story) {
         return __awaiter(this, void 0, void 0, function* () {
             //http://jinjing.duapp.com/task/create?album=小柚子&story=小山羊&taskId=https://www.lizhi.fm/297124/15928136997309190//
-            let result = yield node_fetch_1.default(HOST + `/task/create?album=${encodeURIComponent(story.album)}&story=${encodeURIComponent(story.title)}&taskId=${LIZHI_HOST + story.href}`, {
-                method: "GET",
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-            });
-            return yield result.json();
+            try {
+                let result = yield node_fetch_1.default(HOST + `/task/create?album=${encodeURIComponent(story.album)}&story=${encodeURIComponent(story.title)}&taskId=${LIZHI_HOST + story.href}`, {
+                    method: "GET",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                });
+                return yield result.json();
+            }
+            catch (err) {
+                return yield this.addTask(story);
+            }
         });
     }
     markAlbumToday(id) {
