@@ -55,6 +55,12 @@ class ExecTask extends LoadParser_1.default {
             return task;
         });
     }
+    removeTask(taskId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const fetching = yield node_fetch_1.default(`${HOST}/task/remove?taskId=${taskId}`, getOptions);
+            yield fetching.json();
+        });
+    }
     getDetailByTaskId(taskId) {
         return __awaiter(this, void 0, void 0, function* () {
             let $ = yield this.load(`${taskId}`);
@@ -77,6 +83,11 @@ class ExecTask extends LoadParser_1.default {
             console.log('task', task.album, task.story);
             //2 fetch detail from lizhi
             const storyDetail = yield this.getDetailByTaskId(task.taskId);
+            if (storyDetail.cover === storyDetail.albumCover) {
+                console.log(' no cover  ignored');
+                this.removeTask(task.taskId);
+                return false;
+            }
             console.log('cover', storyDetail.cover);
             //3 check local exists and download mp3 and cover
             //3.1 make local album dir
@@ -132,8 +143,8 @@ class ExecTask extends LoadParser_1.default {
     }
     exec() {
         return __awaiter(this, void 0, void 0, function* () {
-            let task = yield this.popTask();
-            while (task) {
+            while (true) {
+                let task = yield this.popTask();
                 try {
                     let r = yield et.runTask(task);
                     console.log('upload complete', r);

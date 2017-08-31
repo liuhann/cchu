@@ -13,6 +13,7 @@ const fs = require("fs");
 const cheerio = require("cheerio");
 const FormData = require("form-data");
 const formData = require("form-data");
+const download = require('download');
 const HOST = "http://jinjing.duapp.com";
 class LoadParser {
     constructor() {
@@ -167,17 +168,29 @@ class LoadParser {
         return __awaiter(this, void 0, void 0, function* () {
             if (!remoteUrl)
                 return null;
-            let pr = new Promise(function (resolve, reject) {
-                console.log(`downloading ${remoteUrl}`);
-                node_fetch_1.default(remoteUrl).then(function (res) {
-                    let dest = fs.createWriteStream(localFolder + '/' + fileName);
-                    res.body.on('end', () => {
-                        resolve('downloaded');
-                    });
-                    res.body.pipe(dest);
-                });
+            yield download(remoteUrl, localFolder, {
+                filename: fileName
             });
-            return pr;
+            /*
+                    let pr = new Promise(function(resolve, reject) {
+                        console.log(`downloading ${remoteUrl}`);
+                        fetch(remoteUrl).then(function(res:any) {
+                            try {
+                                let dest = fs.createWriteStream(localFolder + '/' + fileName);
+                                res.body.on('end', ()=> {
+                                    resolve('downloaded');
+                                });
+                                res.body.on('error', (err)=> {
+                                   reject(err);
+                                });
+                                res.body.pipe(dest);
+                            } catch (err) {
+                                reject(err);
+                            }
+                        });
+                    });
+            */
+            return;
         });
     }
     delay(sec) {
