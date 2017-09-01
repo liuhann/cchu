@@ -52,7 +52,7 @@ abstract class LoadParser {
     }
 
     replaceName(name:string): string {
-        return name.replace(/[\/:*?"<>|]/g, '');
+        return name.replace(/[\/:*?"<>\s\n\r|]/g, '');
     }
 
     async postCover(localFile:string):Promise<string> {

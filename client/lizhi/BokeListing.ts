@@ -10,7 +10,7 @@ import LizhiListing from "./LizhiListing";
 //http://jinjing.duapp.com/lizhi/album/add?id=25681&name=凯叔讲故事&cover=zzz
 //http://jinjing.duapp.com/lizhi/album/update?id=1975543
 
-const HOST = "http://jinjing.duapp.com";
+const HOST = "https://jinjing.duapp.com";
 const LIZHI_HOST = "https://www.lizhi.fm";
 const FILE_ROOT = 'E:/lizhi';
 
@@ -55,15 +55,19 @@ class BokeListing extends LoadParser {
 
     async addTask(story):Promise<any> {
         //http://jinjing.duapp.com/task/create?album=小柚子&story=小山羊&taskId=https://www.lizhi.fm/297124/15928136997309190//
-        let result = await fetch(HOST + `/task/create?album=${encodeURIComponent(story.album)}&story=${encodeURIComponent(story.title)}&taskId=${LIZHI_HOST+story.href}`, {
-                method: "GET",
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
+        try {
+            let result = await fetch(HOST + `/task/create?album=${encodeURIComponent(story.album)}&story=${encodeURIComponent(story.title)}&taskId=${LIZHI_HOST+story.href}`, {
+                    method: "GET",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
                 }
-            }
-        );
-        return await result.json();
+            );
+            return await result.json();
+        } catch (err) {
+            return await this.addTask(story);
+        }
     }
 
     async markAlbumToday(id) {
@@ -103,15 +107,16 @@ class BokeListing extends LoadParser {
         }
 
         let page = album.last || this.lastPage || 1; //start from page 1
-        this.delay(1000);
+        await this.delay(1000);
         let list = await this.nkl.loadData(`http://www.lizhi.fm/${album.id}/p/${page}.html`);
 
         let storyInc = 0;
         while(list.length) {
             for(let story of list) {
                 story.album = album.name;
+                await this.delay(200);
                 const inserted = await this.addTask(story);
-                //console.log('+task ' + story.title);
+                console.log('+task ' + story.title);
                 storyInc ++;
                 if (inserted.result === 'existed' && album.u) {
                     await this.markAlbumToday(album.id);
@@ -135,6 +140,7 @@ class BokeListing extends LoadParser {
         //await this.execFetchAlbum();
         while (true) {
             try {
+                this.lastPage = 37;
                 await this.delay(1000);
                 let exe =  await this.execAddAlbumTask();
                 if (!exe) break;
@@ -144,7 +150,6 @@ class BokeListing extends LoadParser {
         }
     }
 }
-
 
 const bl = new BokeListing();
 bl.run();
