@@ -50,6 +50,11 @@ class ExecTask extends LoadParser {
         return task;
     }
 
+    async removeTask(taskId: string ) {
+        const fetching = await fetch(`${HOST}/task/remove?taskId=${taskId}`, getOptions);
+        await fetching.json();
+    }
+
     async getDetailByTaskId(taskId: string) : Promise<any> {
         let $ = await this.load(`${taskId}`);
         const detail:any = {};
@@ -71,6 +76,12 @@ class ExecTask extends LoadParser {
 
         //2 fetch detail from lizhi
         const storyDetail = await this.getDetailByTaskId(task.taskId);
+
+        if (storyDetail.cover === storyDetail.albumCover) {
+            console.log(' no cover  ignored');
+            this.removeTask(task.taskId);
+            return false;
+        }
         console.log('cover', storyDetail.cover);
 
 
@@ -133,8 +144,8 @@ class ExecTask extends LoadParser {
     }
 
     async exec() {
-        let task = await this.popTask();
-        while(task) {
+        while(true) {
+            let task = await this.popTask();
             try {
                 let r = await et.runTask(task);
                 console.log('upload complete', r);

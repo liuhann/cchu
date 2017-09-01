@@ -5,6 +5,9 @@ import * as cheerio from 'cheerio';
 import * as FormData from 'form-data';
 import formData = require("form-data");
 
+const download = require('download');
+
+
 declare function unescape(encodedURIComponent: string): string;
 
 const HOST = "http://jinjing.duapp.com";
@@ -160,17 +163,31 @@ abstract class LoadParser {
 
     async downloadFile(remoteUrl: string, localFolder: string, fileName?:string): Promise<any> {
         if (!remoteUrl) return null;
+
+        await download(remoteUrl, localFolder, {
+            filename: fileName
+        });
+
+/*
         let pr = new Promise(function(resolve, reject) {
             console.log(`downloading ${remoteUrl}`);
             fetch(remoteUrl).then(function(res:any) {
-                let dest = fs.createWriteStream(localFolder + '/' + fileName);
-                res.body.on('end', ()=> {
-                    resolve('downloaded');
-                });
-                res.body.pipe(dest);
+                try {
+                    let dest = fs.createWriteStream(localFolder + '/' + fileName);
+                    res.body.on('end', ()=> {
+                        resolve('downloaded');
+                    });
+                    res.body.on('error', (err)=> {
+                       reject(err);
+                    });
+                    res.body.pipe(dest);
+                } catch (err) {
+                    reject(err);
+                }
             });
         });
-        return pr;
+*/
+        return ;
     }
 
     async delay(sec:number):Promise<any> {

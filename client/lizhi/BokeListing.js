@@ -116,7 +116,7 @@ class BokeListing extends LoadParser_1.default {
                 for (let story of list) {
                     story.album = album.name;
                     const inserted = yield this.addTask(story);
-                    console.log('+task ' + story.title);
+                    //console.log('+task ' + story.title);
                     storyInc++;
                     if (inserted.result === 'existed' && album.u) {
                         yield this.markAlbumToday(album.id);
@@ -141,6 +141,7 @@ class BokeListing extends LoadParser_1.default {
             //await this.execFetchAlbum();
             while (true) {
                 try {
+                    yield this.delay(1000);
                     let exe = yield this.execAddAlbumTask();
                     if (!exe)
                         break;
