@@ -7,7 +7,7 @@ const LIZHI_HOST = "https://www.lizhi.fm";
 
 import LoadParser from "../LoadParser";
 import BOSService from "../BOSService";
-const FILE_ROOT = 'F:/lizhi';
+const FILE_ROOT = 'G:/lizhi';
 
 const getOptions = {
     method: 'GET',
@@ -71,6 +71,8 @@ class ExecTask extends LoadParser {
     }
 
     async runTask(task) {
+
+        task.story = this.replaceName(task.story);
         //1 pop task
         console.log('task', task.album, task.story);
 
@@ -82,9 +84,6 @@ class ExecTask extends LoadParser {
             this.removeTask(task.taskId);
             return false;
         }
-        console.log('cover', storyDetail.cover);
-
-
         //3 check local exists and download mp3 and cover
 
         //3.1 make local album dir
@@ -102,6 +101,7 @@ class ExecTask extends LoadParser {
             let musicFile = await this.downloadFile(storyDetail.cover, `${FILE_ROOT}/${task.album}`, task.story + '.png');
         }
 
+        console.log()
         //4 fetch yb story info
         const storyInfo = await this.fetchStoryInfo(task.album, task.story);
 

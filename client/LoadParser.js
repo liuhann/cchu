@@ -49,7 +49,7 @@ class LoadParser {
         }
     }
     replaceName(name) {
-        return name.replace(/[\/:*?"<>|]/g, '');
+        return name.replace(/[\/:*?"<>\s\n\r|]/g, '');
     }
     postCover(localFile) {
         return __awaiter(this, void 0, void 0, function* () {

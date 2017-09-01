@@ -109,14 +109,15 @@ class BokeListing extends LoadParser_1.default {
                 }
             }
             let page = album.last || this.lastPage || 1; //start from page 1
-            this.delay(1000);
+            yield this.delay(1000);
             let list = yield this.nkl.loadData(`http://www.lizhi.fm/${album.id}/p/${page}.html`);
             let storyInc = 0;
             while (list.length) {
                 for (let story of list) {
                     story.album = album.name;
+                    yield this.delay(200);
                     const inserted = yield this.addTask(story);
-                    //console.log('+task ' + story.title);
+                    console.log('+task ' + story.title);
                     storyInc++;
                     if (inserted.result === 'existed' && album.u) {
                         yield this.markAlbumToday(album.id);
@@ -141,6 +142,7 @@ class BokeListing extends LoadParser_1.default {
             //await this.execFetchAlbum();
             while (true) {
                 try {
+                    this.lastPage = 37;
                     yield this.delay(1000);
                     let exe = yield this.execAddAlbumTask();
                     if (!exe)
