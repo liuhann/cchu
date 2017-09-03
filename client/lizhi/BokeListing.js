@@ -142,7 +142,6 @@ class BokeListing extends LoadParser_1.default {
             //await this.execFetchAlbum();
             while (true) {
                 try {
-                    this.lastPage = 37;
                     yield this.delay(1000);
                     let exe = yield this.execAddAlbumTask();
                     if (!exe)

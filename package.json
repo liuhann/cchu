@@ -5,7 +5,8 @@
   "main": "start.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node start.js"
+    "server": "node start.js",
+    "forever": "forever start ./client/lizhi/ExecTask.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "@types/node-fetch": "^1.6.7",
     "alsatian": "^2.0.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "forever-monitor": "^1.7.1",
     "ts-loader": "^2.1.0",
     "typescript": "^2.3.4"
   },

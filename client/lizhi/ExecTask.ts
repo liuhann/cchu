@@ -7,7 +7,7 @@ const LIZHI_HOST = "https://www.lizhi.fm";
 
 import LoadParser from "../LoadParser";
 import BOSService from "../BOSService";
-const FILE_ROOT = 'G:/lizhi';
+const FILE_ROOT = 'F:/lizhi';
 
 const getOptions = {
     method: 'GET',
@@ -69,7 +69,6 @@ class ExecTask extends LoadParser {
         //story.cover = a.attr('data-cover');
         return detail;
     }
-
     async runTask(task) {
 
         task.story = this.replaceName(task.story);

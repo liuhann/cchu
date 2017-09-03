@@ -15,7 +15,7 @@ const HOST = "http://jinjing.duapp.com";
 const LIZHI_HOST = "https://www.lizhi.fm";
 const LoadParser_1 = require("../LoadParser");
 const BOSService_1 = require("../BOSService");
-const FILE_ROOT = 'G:/lizhi';
+const FILE_ROOT = 'F:/lizhi';
 const getOptions = {
     method: 'GET',
     headers: {
