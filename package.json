@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "node start.js",
-    "forever": "forever start ./client/lizhi/ExecTask.js"
+    "forever": "forever start ./client/lizhi/ExecTask.js -l d:/forever.log"
   },
   "author": "",
   "license": "ISC",
