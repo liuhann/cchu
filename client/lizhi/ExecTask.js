@@ -149,8 +149,8 @@ class ExecTask extends LoadParser_1.default {
     exec() {
         return __awaiter(this, void 0, void 0, function* () {
             while (true) {
-                let task = yield this.popTask();
                 try {
+                    let task = yield this.popTask();
                     let r = yield et.runTask(task);
                     console.log('upload complete', r);
                     task = yield this.popTask();

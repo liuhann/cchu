@@ -148,8 +148,8 @@ class ExecTask extends LoadParser {
 
     async exec() {
         while(true) {
-            let task = await this.popTask();
             try {
+                let task = await this.popTask();
                 let r = await et.runTask(task);
                 console.log('upload complete', r);
                 task = await this.popTask();
