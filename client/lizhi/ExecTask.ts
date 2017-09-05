@@ -69,7 +69,6 @@ class ExecTask extends LoadParser {
         //story.cover = a.attr('data-cover');
         return detail;
     }
-
     async runTask(task) {
 
         task.story = this.replaceName(task.story);
