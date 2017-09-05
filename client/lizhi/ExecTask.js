@@ -66,6 +66,10 @@ class ExecTask extends LoadParser_1.default {
             let $ = yield this.load(`${taskId}`);
             const detail = {};
             const divPlayData = $('.js-play-data');
+            if (divPlayData.length === 0) {
+                detail.notfound = true;
+                return detail;
+            }
             detail.cover = $('.audioCover img').attr('src').replace(/_320x320/g, '');
             detail.short = this.decode($('.desText').html());
             detail.albumCover = divPlayData.attr('data-cover');
