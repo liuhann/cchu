@@ -15,7 +15,7 @@ const HOST = "http://jinjing.duapp.com";
 const LIZHI_HOST = "https://www.lizhi.fm";
 const LoadParser_1 = require("../LoadParser");
 const BOSService_1 = require("../BOSService");
-const FILE_ROOT = 'G:/lizhi';
+const FILE_ROOT = 'F:/lizhi';
 const getOptions = {
     method: 'GET',
     headers: {
@@ -106,7 +106,6 @@ class ExecTask extends LoadParser_1.default {
             if (!fs.existsSync(`${FILE_ROOT}/${task.album}/${task.story}.png`)) {
                 let musicFile = yield this.downloadFile(storyDetail.cover, `${FILE_ROOT}/${task.album}`, task.story + '.png');
             }
-            console.log();
             //4 fetch yb story info
             const storyInfo = yield this.fetchStoryInfo(task.album, task.story);
             //4.1 check or upload mp3
@@ -149,16 +148,19 @@ class ExecTask extends LoadParser_1.default {
     exec() {
         return __awaiter(this, void 0, void 0, function* () {
             while (true) {
+                let r;
                 try {
                     let task = yield this.popTask();
-                    let r = yield et.runTask(task);
+                    r = yield et.runTask(task);
                     console.log('upload complete', r);
                     task = yield this.popTask();
                 }
                 catch (e) {
                     console.log(e);
                 }
-                yield this.delay(4000 + Math.random() * 4000);
+                if (r !== false) {
+                    yield this.delay(1000 + Math.random() * 1000);
+                }
             }
         });
     }
