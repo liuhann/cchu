@@ -137,6 +137,24 @@ class BokeListing extends LoadParser_1.default {
             return true;
         });
     }
+    removeUnusedAlbum() {
+        return __awaiter(this, void 0, void 0, function* () {
+            let ft = yield node_fetch_1.default(HOST + "/lizhi/album/list", this.getOptions);
+            const result = yield ft.json();
+            const albumList = result.result;
+            for (let album of albumList) {
+                let fetching = yield node_fetch_1.default(HOST + "/task/list/" + encodeURIComponent(album.name), this.getOptions);
+                const result = yield fetching.json();
+                if (result.result.length === 0) {
+                    yield node_fetch_1.default(HOST + '/lizhi/album/remove?name=' + encodeURIComponent(album.name), this.getOptions);
+                    console.log(`album: ${album.name} ------------XXX removed`);
+                }
+                else {
+                    console.log(`album: ${album.name} not empty`);
+                }
+            }
+        });
+    }
     run() {
         return __awaiter(this, void 0, void 0, function* () {
             //await this.execFetchAlbum();
@@ -156,4 +174,4 @@ class BokeListing extends LoadParser_1.default {
     }
 }
 const bl = new BokeListing();
-bl.run();
+bl.removeUnusedAlbum();

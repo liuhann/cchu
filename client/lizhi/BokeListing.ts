@@ -136,6 +136,23 @@ class BokeListing extends LoadParser {
         return true;
     }
 
+    async removeUnusedAlbum() {
+        let ft = await fetch(HOST + "/lizhi/album/list", this.getOptions);
+        const result = await ft.json();
+        const albumList = result.result;
+
+        for(let album of albumList) {
+            let fetching = await fetch(HOST + "/task/list/" + encodeURIComponent(album.name), this.getOptions);
+            const result = await fetching.json();
+            if (result.result.length===0) {
+                await fetch(HOST + '/lizhi/album/remove?name=' + encodeURIComponent(album.name), this.getOptions);
+                console.log(`album: ${album.name} ------------XXX removed`);
+            } else {
+                console.log(`album: ${album.name} not empty`);
+            }
+        }
+    }
+
     async run() {
         //await this.execFetchAlbum();
         while (true) {
@@ -152,4 +169,4 @@ class BokeListing extends LoadParser {
 }
 
 const bl = new BokeListing();
-bl.run();
+bl.removeUnusedAlbum();
