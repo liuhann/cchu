@@ -10,6 +10,9 @@ import LizhiListing from "./LizhiListing";
 //http://jinjing.duapp.com/lizhi/album/add?id=25681&name=凯叔讲故事&cover=zzz
 //http://jinjing.duapp.com/lizhi/album/update?id=1975543
 
+
+//zhang.暖暖  http://www.lizhi.fm/user/2601672099596352556
+
 const HOST = "https://jinjing.duapp.com";
 const LIZHI_HOST = "https://www.lizhi.fm";
 const FILE_ROOT = 'E:/lizhi';
@@ -169,4 +172,5 @@ class BokeListing extends LoadParser {
 }
 
 const bl = new BokeListing();
-bl.removeUnusedAlbum();
+bl.run();
+//bl.removeUnusedAlbum();

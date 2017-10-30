@@ -174,4 +174,5 @@ class BokeListing extends LoadParser_1.default {
     }
 }
 const bl = new BokeListing();
-bl.removeUnusedAlbum();
+bl.run();
+//bl.removeUnusedAlbum(); 
